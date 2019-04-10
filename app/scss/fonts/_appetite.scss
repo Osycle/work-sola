@@ -1,0 +1,22 @@
+
+/* Appetite */
+@font-face {
+    font-family: 'Appetite';
+    font-style: Italic;
+    src: url($path+'/AppetiteItalic.eot');
+    src: url($path+'/AppetiteItalic.eot') format('embedded-opentype'),
+         url($path+'/AppetiteItalic.woff2') format('woff2'),
+         url($path+'/AppetiteItalic.woff') format('woff'),
+         url($path+'/AppetiteItalic.ttf') format('truetype'),
+         url($path+'/AppetiteItalic.svg#AppetiteItalic') format('svg');
+}
+
+@font-face {
+    font-family: 'Appetite';
+    src: url($path+'/Appetite.eot');
+    src: url($path+'/Appetite.eot') format('embedded-opentype'),
+         url($path+'/Appetite.woff2') format('woff2'),
+         url($path+'/Appetite.woff') format('woff'),
+         url($path+'/Appetite.ttf') format('truetype'),
+         url($path+'/Appetite.svg#Appetite') format('svg');
+}

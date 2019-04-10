@@ -1,0 +1,43 @@
+/* 
+		_footer.scss
+*/
+
+/*
+										---FOOTER---
+*/
+
+
+
+#footer{
+	position: relative;
+	//color: rgba(black, 0.4);
+	//min-height: 150px;
+	line-height: 170%;
+	font-size: 0.85em;
+}
+.footer-content{
+	padding-top: 30px;
+	padding-bottom: 30px;
+
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	background-image: url('../img/bg/bg-footer.jpg');
+}
+.goslogos-items{
+	.img{
+		background-size: auto;
+		height: 80px;
+		background-position: center;
+	}
+}
+
+
+.copy-content{
+	background-color: $color-3;
+	color: white;
+}
+.dev{
+	font-size: 0.9em;
+}
+

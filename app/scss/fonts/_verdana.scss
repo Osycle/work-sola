@@ -1,0 +1,33 @@
+/* Verdana */
+@font-face {
+    font-family: 'Verdana';
+    src: url($path+'Verdana-Bold.woff2') format('woff2'),
+        url($path+'Verdana-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Verdana';
+    src: url($path+'Verdana.woff2') format('woff2'),
+        url($path+'Verdana.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Verdana';
+    src: url($path+'Verdana-BoldItalic.woff2') format('woff2'),
+        url($path+'Verdana-BoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Verdana';
+    src: url($path+'Verdana-Italic.woff2') format('woff2'),
+        url($path+'Verdana-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+}
+

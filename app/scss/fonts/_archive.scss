@@ -1,0 +1,10 @@
+/* archive */
+@font-face {
+    font-family: 'archive';
+    src: url($path+'archive.eot');
+    src: url($path+'archive.eot') format('embedded-opentype'),
+         url($path+'archive.woff2') format('woff2'),
+         url($path+'archive.woff') format('woff'),
+         url($path+'archive.ttf') format('truetype'),
+         url($path+'archive.svg#archive') format('svg');
+}

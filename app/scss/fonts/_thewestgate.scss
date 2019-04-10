@@ -1,0 +1,14 @@
+/* The West Gate */
+@font-face {
+    font-family: 'The West Gate';
+    src: url($path+'TheWestGate.eot');
+    src: url($path+'TheWestGate.eot?#iefix') format('embedded-opentype'),
+        url($path+'TheWestGate.woff2') format('woff2'),
+        url($path+'TheWestGate.woff') format('woff'),
+        url($path+'TheWestGate.ttf') format('truetype'),
+        url($path+'TheWestGate.svg#TheWestGate') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+

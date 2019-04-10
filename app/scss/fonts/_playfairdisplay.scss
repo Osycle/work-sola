@@ -1,0 +1,48 @@
+@font-face {
+    font-family: 'Playfair Display';
+    src: url($path+'PlayfairDisplay-BoldItalic.woff2') format('woff2'),
+        url($path+'PlayfairDisplay-BoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Playfair Display';
+    src: url($path+'PlayfairDisplay-Bold.woff2') format('woff2'),
+        url($path+'PlayfairDisplay-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Playfair Display';
+    src: url($path+'PlayfairDisplay-Black.woff2') format('woff2'),
+        url($path+'PlayfairDisplay-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Playfair Display';
+    src: url($path+'PlayfairDisplay-Regular.woff2') format('woff2'),
+        url($path+'PlayfairDisplay-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Playfair Display';
+    src: url($path+'PlayfairDisplay-BlackItalic.woff2') format('woff2'),
+        url($path+'PlayfairDisplay-BlackItalic.woff') format('woff');
+    font-weight: 900;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Playfair Display';
+    src: url($path+'PlayfairDisplay-Italic.woff2') format('woff2'),
+        url($path+'PlayfairDisplay-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+}
+
