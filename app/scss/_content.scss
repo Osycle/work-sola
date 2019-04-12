@@ -85,35 +85,6 @@ figcaption{
 }
 
 
-.bnr-entry{
-	color: white;
-	.align-i-center{
-		background-size: cover;
-		
-	}
-	.bg-shadow{
-		background-color: $color-1;
-		opacity: 0.65;
-	}
-	h1{
-		padding-left: 15px;
-		border-left: 5px solid;
-	}
-	@media (min-width: 992px) {
-		.align-i-center{
-			height: 215px;
-		}
-		h1{
-			width: 80%;
-		}
-	}
-	@media (max-width: 991px) {
-		.container{
-			width: 100%;
-		}
-	}
-}
-
 
 
 //--bnr-slider
@@ -163,26 +134,24 @@ figcaption{
 			}
 		}
 	}
-	h1, p, .btn-def, .btn-opacity, img{
-		opacity: 0;
-		transition: 1s ease;
-	}
-	h1{
-		text-transform: uppercase;
-		transform: matrix(1,0,0,1,0,-7);
-	}
-	p{
+	figure{
+		h1, p, .btn-def, .btn-opacity, img{
+			opacity: 0;
+			transition: 1s ease;
+		}
+		h1{
+			font-size: em(60, 16);
+			transform: matrix(1,0,0,1,0,-7);
+		}
+		p{
 
-	}
-	p, img{
-		transform: translateY(20px);	
+		}
+		p, img{
+			transform: translateY(20px);	
+		}
 	}
 
 	.btn-def, .btn-opacity{
-		background-color: white;
-		a{
-			color: $color-3;
-		}
 		transform: scale(1.3);
 	}
 
@@ -220,31 +189,40 @@ figcaption{
 			}
 		}
 		@media (min-width: 992px) {
-			.align-i-center{
-				padding-top: 190px;
-			}
+
 		}
 		
 	}
 	.bg-shadow{
 		pointer-events: none;
-		background-color: rgba(black, 0.3);
+		background-color: rgba(black, 0.2);
 		//background: linear-gradient(to bottom, transparent, $color-2);
 	}
 
 
 	//Навигация
-	.flickity-page-dots{
+	.flickity-page-dots, .flickity-dots-1 .flickity-page-dots{
 		@extend .container;
-		@extend .trans-center;
-		position: absolute;
-		top: auto !important;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);	
+		position: absolute !important;
+		//left: auto !important;
 		text-align: center;
 		padding-left: 30px;
+		height: 130px;
 		padding-right: 30px;
+		margin-bottom: 0 !important;
+		text-align: right;
+		pointer-events: none;
+		*{
+			pointer-events: auto;
+		}
 		li{
-			margin-left: 8px;
-    	margin-right: 8px;
+			display: inline-block;
+			margin-left: auto;
+			margin-top: 15px;
+    	margin-bottom: 15px;
 		}
 	}
 	@media (min-width: 992px) {
@@ -280,14 +258,21 @@ figcaption{
 		.container-arrows{
 			width: 100%;
 		}
-		.btn-opacity{
-			margin-top: 5px;
-			margin-bottom: 5px;
-		}
+
 	}
 	@media ( max-width:370px ) {
 		word-wrap: break-word;
 	}
 
 }
-
+.bnr-footer{
+	//@extend .trans-h-center;
+	left: 50%;
+	z-index: 1;
+	color: white;
+	padding-top: 15px;
+	padding-bottom: 30px;
+	transform: translateX(-50%);
+	position: absolute;
+	bottom: 0;
+}

@@ -95,39 +95,6 @@
 			});
 
 
-		//MIN-MENU
-		$("#min-menu").mmenu({
-			extensions: [
-				"wrapper-bg", // wrapper-bg black
-				//"theme-dark",
-				"theme-white",
-				//"fullscreen",
-				"listview-50",
-				"fx-panels-slide-up",
-				"fx-listitems-drop",
-				"border-offset",
-				//"position-front",
-				//"position-left"
-			],
-			navbar: {
-				title: "Меню"
-			},
-			navbars: [{
-					height: 0,
-					content: [
-						// '<div class="close-btn close-content bar">' +
-						// '<a  href="#page" ><span class="icon-bar"></span><span class="icon-bar"></span></a>' +
-						// '</div>'
-					]
-				},
-				{
-					content: ["prev", "title"]
-				}
-			]
-		}, {});
-
-
-
 
 
 
@@ -201,7 +168,7 @@
 				initialIndex: 0,
 				friction: 1,
 				selectedAttraction: 1,
-				prevNextButtons: true,
+				prevNextButtons: false,
 				draggable: false,
 				wrapAround: true,
 				pageDots: true,

@@ -255,17 +255,33 @@ html{
 }
 .carousel-dots{
 	.owl-dot, .dot{
-		background-color: $color-1;
 		margin-left: 3px;
 		margin-right: 3px;
-		height: 13px;
-		width: 13px;
+		height: 14px;
+		width: 14px;
 		display: inline-block;
 		border-radius: 50%;
+		position: relative;
+
 		&.is-selected, &.active{
 			z-index: 2;
 			position: relative;
-			background-color: #eeeeee;
+			background-color: $color-1;
+			&:before{
+				opacity: 1;
+			}
+		}
+		&:before{
+			@extend .clafclear;
+			width: 25px;
+			opacity: 0;
+			height: 25px;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%, -50%);			
+			background-position: center;
+			background-size: cover;
+			background-image: url('../img/other/circle-path.png');
 		}
 	}
 
