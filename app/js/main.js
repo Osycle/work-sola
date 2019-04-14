@@ -39,20 +39,20 @@
 
 		/*Owl carousel*/
 		var owlBtn = ['<span class="owl-btn previous"><svg viewBox="0 0 100 100"><path d="M 198.608,246.104 382.664,62.04 c 5.068,-5.056 7.856,-11.816 7.856,-19.024 0,-7.212 -2.788,-13.968 -7.856,-19.032 L 366.536,7.864 C 361.476,2.792 354.712,0 347.504,0 340.296,0 333.54,2.792 328.476,7.864 L 109.328,227.008 c -5.084,5.08 -7.868,11.868 -7.848,19.084 -0.02,7.248 2.76,14.028 7.848,19.112 l 218.944,218.932 c 5.064,5.072 11.82,7.864 19.032,7.864 7.208,0 13.964,-2.792 19.032,-7.864 l 16.124,-16.12 c 10.492,-10.492 10.492,-27.572 0,-38.06 z" class="arrow"></path></svg></span>', '<span class="owl-btn next"><svg viewBox="0 0 100 100"><path d="M 198.608,246.104 382.664,62.04 c 5.068,-5.056 7.856,-11.816 7.856,-19.024 0,-7.212 -2.788,-13.968 -7.856,-19.032 L 366.536,7.864 C 361.476,2.792 354.712,0 347.504,0 340.296,0 333.54,2.792 328.476,7.864 L 109.328,227.008 c -5.084,5.08 -7.868,11.868 -7.848,19.084 -0.02,7.248 2.76,14.028 7.848,19.112 l 218.944,218.932 c 5.064,5.072 11.82,7.864 19.032,7.864 7.208,0 13.964,-2.792 19.032,-7.864 l 16.124,-16.12 c 10.492,-10.492 10.492,-27.572 0,-38.06 z" class="arrow"></path></svg></span>']
-		$(".short-brick-items.owl-carousel").owlCarousel({
+		$(".short-services-items.owl-carousel").owlCarousel({
 			nav: true,
 			//items: 3,
-			dots: !checkSm(),
+			dots: false,
 			dotsEach: true,
-			touchDrag: false,
 			autoplay: true,
-			touchDrag: true,
+			touchDrag: false,
 			responsive:{
 				0:{items:1},
-				991:{items:4}
+				991:{items:2},
+				1600:{items:3}
 			},
 			navText : owlBtn,
-			margin: 30
+			margin: 15
 		});
 
 
@@ -201,8 +201,6 @@
 		$(".bnr-carousel .carousel-items").append("<div class='container container-arrows'></div>").find(".container-arrows").append($(".bnr-carousel .carousel-items .flickity-prev-next-button"))
 		
 
-	    
-
 
 
 		window.carouselArticle = function() {
@@ -320,32 +318,6 @@
 		$(window).trigger("scroll");
 
 
-
-
-
-
-
-
-
-	//vi init
-	window.vi = $(".vi-btn-toggle").initVi({
-
-		fontSize: 2,		 					// default 2
-		bgColor: "black", 				// default white
-		imgVisibility: false, 	// default hidden
-		grayScale: true, 					// default true
-
-		// Callback function
-		callOn: function(){				
-			//$(".fa.fa-eye").addClass("fa-eye-slash")
-		},			
-		callOff: function(){
-			//$(".fa.fa-eye").removeClass("fa-eye-slash")
-		},		
-		callToggle: function(){}
-
-
-	})
 
 
 

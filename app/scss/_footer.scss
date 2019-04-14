@@ -13,31 +13,119 @@
 	//color: rgba(black, 0.4);
 	//min-height: 150px;
 	line-height: 170%;
-	font-size: 0.85em;
+	font-weight: 500;
+	@media (min-width: 992px) {
+		font-size: 0.9em;
+	}
+	.socicons{
+		color: $color-1;
+		font-size: 18px;
+		ul{
+			display: flex;
+			@media (max-width: 991px) {
+				justify-content: center;
+			}
+		}
+		li{
+			margin-left: 2px;
+			transition: all 0.3s ease;
+			width: 30px;
+			height: 30px;
+			border-radius: 50%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			a{
+				width: 100%;
+    		text-align: center;
+			}
+			&:hover{
+				background-color: $color-1;
+				color: white;
+				box-shadow: 0 2px 5px -1px $color-1 ;
+			}
+		}
+		.fa-paper-plane{
+		}
+	}
 }
 .footer-content{
 	padding-top: 30px;
 	padding-bottom: 30px;
-
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: cover;
-	background-image: url('../img/bg/bg-footer.jpg');
 }
-.goslogos-items{
+.footer-menu{
+	display: flex;
+	justify-content: space-between;
+}
+.footer-menu-item{
+	padding: 0 15px;
+	li{
+		max-width: 120px;
+	}
+	a{
+		color: $color-gray-3;
+		&:not(:hover){
+			text-decoration: underline;
+		}
+	}
+}
+
+.footer-contacts{
+	.icon-content{
+		min-width: 20px;
+	}
+	.icm{
+		display: inline-block;
+		padding: 10px 5px;
+		font-size: 19px;
+	}
+	@media (max-width: 991px) {
+		.icm{
+			font-size: 23px;
+		}
+	}
+}
+
+.footer-info{
+	border-top: 1px solid $color-gray-1;
+}
+
+.pay-items{
+	text-align: center;
+	figure{
+		display: inline-block;
+		margin-left: 10px;
+		margin-right: 10px;
+	}
+	.img-content{
+		box-shadow: 0 0 15px -3px rgba(black, 0.2);
+		border-radius: 5px;
+	}
 	.img{
-		background-size: auto;
-		height: 80px;
+		width: 70px;
+		height: 40px;
 		background-position: center;
+		background-size: auto;
+	}
+	@media (max-width: 480px){
+		figure{
+			.img{
+				background-size: 80%;
+				width: 140px;
+				height: 80px;
+			}
+		}
 	}
 }
 
 
+
+
 .copy-content{
-	background-color: $color-3;
-	color: white;
+	background-color: #f3f3f3;
+	color: $color-gray-3;
+	font-size: 0.85em;
 }
 .dev{
-	font-size: 0.9em;
 }
 

@@ -20,7 +20,7 @@ $color-footer: #0071BC;
 
 $color-gray-1: #ededed; //#bdbdbd
 $color-gray-2: #bdbdbd;
-$color-gray-3: #343434;
+$color-gray-3: #5e5e5e;
 
 
 
@@ -455,14 +455,21 @@ table {
 
 
 
-
+[class*='boxes-'].owl-carousel {
+  margin-left: 0;
+  margin-right: 0; }
+  [class*='boxes-'].owl-carousel figure {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0; }
 
 
 
 .cell-hover{
 	opacity: 0;
 	padding: 0 5%;
-	background-color: rgba(black, 0.7);
+	//background-color: rgba(black, 0.7);
+	background: linear-gradient(135deg, #06c129, transparent 120%);
 	background-clip: border-box;
 	@extend .fuller;
 	pointer-events: none;
@@ -557,19 +564,19 @@ table {
 	button{
 		width: 100%;
 		font-weight: inherit;
-		text-transform: uppercase;
 	}
 	a, button, .btn-this{		
 		line-height: normal;
+		text-transform: uppercase;
 		position: relative;
-		font-size: 1em;
+		font-size: 0.8em;
 		&:not([class*="p-h"]){
-			padding-left: 25px;
-			padding-right: 25px;
+			padding-left: 45px;
+			padding-right: 45px;
 		}
 		&:not([class*="p-v"]){
-			padding-top: 12px;
-			padding-bottom: 12px;
+			padding-top: 20px;
+			padding-bottom: 20px;
 		}
 		&:not([class*="flex"]){
 			display: block;
@@ -602,7 +609,7 @@ table {
 		background-color: $color-1;
 	}	
 	&:not(.changecolor-none):hover{
-		background-color: $color-2;
+		background-color: lighten($color-1, 5%);
 	}
 	&.radius{
 		border-radius: 20px;
@@ -772,7 +779,7 @@ table {
 
 .parag-gray{
 	p:not([class*="color"]){
-		color: #828282;//4e5860
+		color: #5e5e5e;//4e5860
 	}
 }
 
@@ -788,7 +795,6 @@ body{
 	//height: auto;
 	display: contents;
 	background-color: white;
-	background-image: url('../img/bg/bg-body.jpg');
 	background-repeat: repeat-y;
 	background-position: center 0;
 	
@@ -924,15 +930,15 @@ h1,h2,h3,h4,h5{
 h1, h2, h3, h4{
 	margin-top: 10px;
 	margin-bottom: 10px;
-	font-weight: 600;
 	position: relative;	
 }
 h1{
-	font-size: em(32, 15);
+	font-size: em(48, 15);
 	margin-bottom: 15px;
-	font-weight: 800;
+	font-weight: 900;
+	line-height: 120%;
 	@media (max-width: 991px) {
-		font-size: em(20, 15);
+		font-size: em(26, 15);
 	}
 }
 h2{
@@ -953,7 +959,7 @@ h3{
 }
 h4{
 	font-weight: 700;
-	font-size: em(17, 15);
+	font-size: em(18, 15);
 }
 h5{	
 	line-height: 150%;
@@ -1005,7 +1011,6 @@ main{
 	z-index: 1;
 	color: black;
 	min-height: 300px;
-	//background-image: url('../img/bg/bg-terrazzo.jpg');
 	background-position: center bottom;
 	background-repeat: no-repeat;
 	@extend .list-style-1;
@@ -1015,7 +1020,6 @@ main{
 	}
 	
 	p{
-		font-size: 0.93em;
 		//font-weight: 400;
 		position: relative;
 		line-height: 150%;
@@ -1030,30 +1034,30 @@ main{
 		//letter-spacing: 0.5px;
 	}
 	.line-height-def{
-		line-height: 100%;
+		&, p{
+			line-height: 100%;
+		}
 	}
 
 
 
 }
+.container-fluid-page{
+	@extend .container-fluid;
+	@media (min-width: 992px) {
+		width: calc(100% - 140px);
+	}
+}
+
 hr{
 	border-color: rgba(165, 165, 165, 0.62);
 }
 
 
-
-.control-content{
-	position: relative;
-	.fa{
-		z-index: 1;
-		font-size: 16px;
-		color: $color-gray-2;
-		position: absolute;
-		right: 15px;
-		top: 12px;
-	}
-	.fa-envelope{
-		font-size: 14px;
+.text-item{
+	@extend .parag-gray;
+	p{
+		margin-bottom: 15px;
 	}
 }
 
