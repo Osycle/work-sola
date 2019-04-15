@@ -17,36 +17,37 @@
 	@media (min-width: 992px) {
 		font-size: 0.9em;
 	}
-	.socicons{
-		color: $color-1;
-		font-size: 18px;
-		ul{
-			display: flex;
-			@media (max-width: 991px) {
-				justify-content: center;
-			}
-		}
-		li{
-			margin-left: 2px;
-			transition: all 0.3s ease;
-			width: 30px;
-			height: 30px;
-			border-radius: 50%;
-			display: flex;
-			align-items: center;
+
+}
+.footer-socicons{
+	color: $color-1;
+	font-size: 18px;
+	ul{
+		display: flex;
+		@media (max-width: 991px) {
 			justify-content: center;
-			a{
-				width: 100%;
-    		text-align: center;
-			}
-			&:hover{
-				background-color: $color-1;
-				color: white;
-				box-shadow: 0 2px 5px -1px $color-1 ;
-			}
 		}
-		.fa-paper-plane{
+	}
+	li{
+		margin-left: 2px;
+		transition: all 0.3s ease;
+		width: 30px;
+		height: 30px;
+		border-radius: 50%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		a{
+			width: 100%;
+  		text-align: center;
 		}
+		&:hover{
+			background-color: $color-1;
+			color: white;
+			box-shadow: 0 2px 5px -1px $color-1 ;
+		}
+	}
+	.fa-paper-plane{
 	}
 }
 .footer-content{

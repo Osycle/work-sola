@@ -74,10 +74,19 @@
 }
 
 .fancybox-close-small{	
+	&:focus, &:active{
+		border: none;
+		&:after{
+			outline: none;
+			border: none;
+		}
+	}
 	&:after{
+		font-size: 44px;
 		border-radius: 0;
 		background-color: transparent;
 		color: white;
+		//transform: scale(2);
 	}
 	&:hover{
 		&:after{

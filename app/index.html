@@ -19,6 +19,59 @@
 </head>
 
 <body>
+	<!-- модальные окна -->
+	<div class="hide">
+		<div class="menumodal" id="menumodal">
+			<div class="menumodal-container">
+				<div class="header-lang">
+					<ul class="list-inline">
+						<li><a href="">Рус</a></li>
+						<li><a href="">Eng</a></li>
+						<li><a href="">O’zb</a></li>
+					</ul>
+				</div>
+				<div class="btn-content m-v-15">
+					<span class="btn-signin">
+						<a href="javascript:;"><span class="icm icm-login"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span>Личный кабинет</a>
+					</span>
+				</div>
+				<div class="menumodal-content">
+					<ul class="menumodal-list">
+						<li class="active"><a href="index.html" title=>Главная страница</a></li>
+						<li><a href="internet.html" title=>Интернет</a>
+							<ul class="sub-menu-1">
+								<li><a href="for-home">Для дома</a></li>
+								<li><a href="for-business">Для бизнеса</a></li>
+								<li><a href="sola-free">Sola free</a></li>
+							</ul>
+						</li>
+						<li><a href="to-operators.html" title=>Операторам</a></li>
+						<li><a href="advertisers.html" title=>Рекламодателям</a></li>
+						<li><a href="about.html" title=>О нас</a></li>
+						<li><a href="news.html" title=>Новости</a></li>
+						<li><a href="contacts.html" title=>Контакты</a></li>
+					</ul>
+				</div>
+				<div class="parag-gray">
+					<p><small>Часы работы: <span class="color-1">9:00-18:00</span></small></p>
+					<h3><a href="tel:+998712070806"><b>+998 (71) 207 08-06</b></a></h3>
+					<p><small>г.Ташкент,  ул. Шота Руставели, 32А</small></p>
+					<h3 class="color-1"><a href="mainto:info@sola.uz"><b><u>info@sola.uz</u></b></a></h3>
+				</div>
+				<div class="socicons footer-socicons text-nowrap m-t-30">
+					<ul class="justify-c-center">
+						<li><a href="" title="" target="_blank"><i class="fa fa-instagram"></i></a></li>
+						<li><a href="" title="" target="_blank"><i class="fa fa-facebook"></i></a></li>
+						<li><a href="" title="" target="_blank"><i class="fa fa-paper-plane"></i></a></li>
+						<li><a href="" title="" target="_blank"><i class="fa fa-twitter"></i></a></li>
+					</ul>
+				</div>
+				<span class="btn-def m-v-15 font-size-1">
+					<a href="production.html" title="" class="p-v-15 p-h-30"><small><b>вам перезвонить?</b></small></a>
+				</span>
+			</div>
+		</div>
+	</div>
 	<div id="page">
 
 		<!-- HEADER -->
@@ -81,7 +134,7 @@
 
 		</header>
 		<!-- MIN MENU HEADER -->
-		<div class="min-menu-header hidden-md hidden-lg">
+		<div class="min-menu-header hidden-md hidden-lg header-scroll">
 			<div class="wrapper-bg"></div>
 			<div class="col-12-3">
 				<div class="min-menu-logo">
@@ -93,7 +146,7 @@
 				</div>
 			</div>
 			<div class="min-menu-bar">
-				<a href="#min-menu">
+				<a href="javascript:;" data-src="#menumodal" data-fancybox>
 					<div class="bar">
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
@@ -120,11 +173,15 @@
 									<div class="align-i-center relative p-h-15">
 										<div class="box-md-5 text-content">
 											<div class="wrapper">
+												<div class="bnr-phone box-xs-10 font-size-2 m-b-20">
+													<span>Есть вопросы? Позвоните:</span><br>
+													<span><a href="tel:+998712070806"><b><big>+998 (71) 207 08-06</big></b></a></span>
+												</div>
 												<h1>Первый <span class="color-1">Wi-Fi</span> оператор в Центральной Азии</h1>
 												<p class="box-md-7">Разнообразный и богатый опыт консультация с профессионалами из IT требует от нас анализа дальнейших направлений развитая системы массового участия! Практический опыт показывает, что новая модель организационной деятельности представляет собой интересный эксперимент проверки позиций, занимаемых участниками в отношении поставленных задач.</p>
 											</div>
 											<span class="btn-def m-v-30">
-												<a href="production.html" title="" class="p-v-15 p-h-60">Узнать больше</a>
+												<a href="about.html" title="">Узнать больше</a>
 											</span>
 										</div>
 									</div>
@@ -156,7 +213,6 @@
 					</div>
 				</div>
 			</div><!-- ./bnr-slider -->
-			
 
 			<!-- short-about -->
 			<div class="short-about" id="short-about">
@@ -492,7 +548,7 @@
 							</div>
 						</div>
 						<div class="col-md-6 col-md-offset-6 m-v-30">
-							<div class="socicons text-nowrap">
+							<div class="socicons footer-socicons text-nowrap">
 								<ul class="">
 									<li><a href="" title="" target="_blank"><i class="fa fa-instagram"></i></a></li>
 									<li><a href="" title="" target="_blank"><i class="fa fa-facebook"></i></a></li>
