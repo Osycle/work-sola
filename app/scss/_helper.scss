@@ -108,20 +108,24 @@ html{
 
 /* parag margin */
 @for $i from 0 through 4 {
-	.parag-m-h-#{5*$i} { 
-		p{
-			margin-left: 5*$i+px;
-			margin-right: 5*$i+px;
-		}
-	}
-}
-@for $i from 0 through 4 {
 	.parag-m-v-#{5*$i} { 
 		p{
 			margin-top: 5*$i+px;
 			margin-bottom: 5*$i+px;
 		}
 	}
+	.parag-m-h-#{5*$i} { 
+		p{
+			margin-left: 5*$i+px;
+			margin-right: 5*$i+px;
+		}
+	}
+	.parag-m-b-#{5*$i} { 
+		p{
+			margin-bottom: 5*$i+px;
+		}
+	}
+
 }
 
 

@@ -2,11 +2,11 @@
 
 @font-face {
   font-family: '#{$icomoon-font-family}';
-  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?7jw0ck');
-  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?7jw0ck#iefix') format('embedded-opentype'),
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?7jw0ck') format('truetype'),
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?7jw0ck') format('woff'),
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?7jw0ck##{$icomoon-font-family}') format('svg');
+  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?wa65r9');
+  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?wa65r9#iefix') format('embedded-opentype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?wa65r9') format('truetype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?wa65r9') format('woff'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?wa65r9##{$icomoon-font-family}') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -104,6 +104,11 @@
     content: $icm-arrow-point-to-right; 
   }
 }
+.icm-ballot {
+  &:before {
+    content: $icm-ballot; 
+  }
+}
 .icm-calendar {
   &:before {
     content: $icm-calendar; 
@@ -112,6 +117,11 @@
 .icm-clip {
   &:before {
     content: $icm-clip; 
+  }
+}
+.icm-cloud-computing {
+  &:before {
+    content: $icm-cloud-computing; 
   }
 }
 .icm-cloud-network .path1 {
@@ -273,6 +283,11 @@
     color: rgb(6, 193, 41);
   }
 }
+.icm-conversation {
+  &:before {
+    content: $icm-conversation; 
+  }
+}
 .icm-correct {
   &:before {
     content: $icm-correct; 
@@ -286,6 +301,11 @@
 .icm-debit-card {
   &:before {
     content: $icm-debit-card; 
+  }
+}
+.icm-delete {
+  &:before {
+    content: $icm-delete; 
   }
 }
 .icm-email-envelope-outline-shape-with-rounded-corners {
@@ -420,6 +440,11 @@
 .icm-manager {
   &:before {
     content: $icm-manager; 
+  }
+}
+.icm-megaphone {
+  &:before {
+    content: $icm-megaphone; 
   }
 }
 .icm-minus {
@@ -559,6 +584,11 @@
 .icm-open-book {
   &:before {
     content: $icm-open-book; 
+  }
+}
+.icm-paper-plane {
+  &:before {
+    content: $icm-paper-plane; 
   }
 }
 .icm-phone-call {
@@ -805,6 +835,11 @@
     content: $icm-startup; 
   }
 }
+.icm-tap {
+  &:before {
+    content: $icm-tap; 
+  }
+}
 .icm-three-buildings {
   &:before {
     content: $icm-three-buildings; 
@@ -818,6 +853,11 @@
 .icm-tree {
   &:before {
     content: $icm-tree; 
+  }
+}
+.icm-video {
+  &:before {
+    content: $icm-video; 
   }
 }
 .icm-video-conference .path1 {

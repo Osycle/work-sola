@@ -38,9 +38,11 @@ $header-top-height: 110px;
 	}
 }
 .header-offset{
-	height: 80px;
+	height: 110px;
+	background-color: $color-gray-4;
 	@media (max-width: 991px) {
-		display: none;
+		//display: none;
+		height: 80px;
 	}
 }
 
@@ -82,7 +84,7 @@ $header-top-height: 110px;
 		.header-top{
 			//box-shadow: 0px 5px 20px -10px black;
 			//padding-bottom: 0;
-			background-color: #282828;
+			background-color: $color-gray-4;
 		}
 		.header-top-content{
 			height: 80px;
@@ -389,7 +391,7 @@ ul[class*="sub-menu"]{
 			transition: all 0.3s ease;
 		}
 		&.scrolled{
-			background-color: #282828;
+			background-color: $color-gray-4;
 			height: 70px;
 			.min-menu-logo{
 				.img{
