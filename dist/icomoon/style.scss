@@ -1,0 +1,967 @@
+@import "variables";
+
+@font-face {
+  font-family: '#{$icomoon-font-family}';
+  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?wa65r9');
+  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?wa65r9#iefix') format('embedded-opentype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?wa65r9') format('truetype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?wa65r9') format('woff'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?wa65r9##{$icomoon-font-family}') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icm-"], [class*=" icm-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: '#{$icomoon-font-family}' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icm-add {
+  &:before {
+    content: $icm-add; 
+  }
+}
+.icm-addition-button {
+  &:before {
+    content: $icm-addition-button; 
+  }
+}
+.icm-airplane-shape {
+  &:before {
+    content: $icm-airplane-shape; 
+  }
+}
+.icm-antenna .path1 {
+  &:before {
+    content: $icm-antenna-path1;  
+    color: rgb(6, 193, 41);
+  }
+}
+.icm-antenna .path2 {
+  &:before {
+    content: $icm-antenna-path2;  
+    margin-left: -1em;  
+    color: rgb(6, 193, 41);
+  }
+}
+.icm-antenna .path3 {
+  &:before {
+    content: $icm-antenna-path3;  
+    margin-left: -1em;  
+    color: rgb(6, 193, 41);
+  }
+}
+.icm-antenna .path4 {
+  &:before {
+    content: $icm-antenna-path4;  
+    margin-left: -1em;  
+    color: rgb(6, 193, 41);
+  }
+}
+.icm-antenna .path5 {
+  &:before {
+    content: $icm-antenna-path5;  
+    margin-left: -1em;  
+    color: rgb(6, 193, 41);
+  }
+}
+.icm-antenna .path6 {
+  &:before {
+    content: $icm-antenna-path6;  
+    margin-left: -1em;  
+    color: rgb(6, 193, 41);
+  }
+}
+.icm-antenna .path7 {
+  &:before {
+    content: $icm-antenna-path7;  
+    margin-left: -1em;  
+    color: rgb(40, 40, 40);
+  }
+}
+.icm-antenna-2 {
+  &:before {
+    content: $icm-antenna-2; 
+  }
+}
+.icm-apple-black-silhouette-with-a-leaf {
+  &:before {
+    content: $icm-apple-black-silhouette-with-a-leaf; 
+  }
+}
+.icm-arrow-point-to-right {
+  &:before {
+    content: $icm-arrow-point-to-right; 
+  }
+}
+.icm-ballot {
+  &:before {
+    content: $icm-ballot; 
+  }
+}
+.icm-calendar {
+  &:before {
+    content: $icm-calendar; 
+  }
+}
+.icm-clip {
+  &:before {
+    content: $icm-clip; 
+  }
+}
+.icm-cloud-computing {
+  &:before {
+    content: $icm-cloud-computing; 
+  }
+}
+.icm-cloud-network .path1 {
+  &:before {
+    content: $icm-cloud-network-path1;  
+    color: rgb(6, 193, 41);
+  }
+}
+.icm-cloud-network .path2 {
+  &:before {
+    content: $icm-cloud-network-path2;  
+    margin-left: -1em;  
+    color: rgb(40, 40, 40);
+  }
+}
+.icm-cloud-network .path3 {
+  &:before {
+    content: $icm-cloud-network-path3;  
+    margin-left: -1em;  
+    color: rgb(40, 40, 40);
+  }
+}
+.icm-cloud-network .path4 {
+  &:before {
+    content: $icm-cloud-network-path4;  
+    margin-left: -1em;  
+    color: rgb(40, 40, 40);
+  }
+}
+.icm-cloud-network .path5 {
+  &:before {
+    content: $icm-cloud-network-path5;  
+    margin-left: -1em;  
+    color: rgb(40, 40, 40);
+  }
+}
+.icm-cloud-network .path6 {
+  &:before {
+    content: $icm-cloud-network-path6;  
+    margin-left: -1em;  
+    color: rgb(40, 40, 40);
+  }
+}
+.icm-cloud-network .path7 {
+  &:before {
+    content: $icm-cloud-network-path7;  
+    margin-left: -1em;  
+    color: rgb(40, 40, 40);
+  }
+}
+.icm-cloud-network .path8 {
+  &:before {
+    content: $icm-cloud-network-path8;  
+    margin-left: -1em;  
+    color: rgb(40, 40, 40);
+  }
+}
+.icm-cloud-network .path9 {
+  &:before {
+    content: $icm-cloud-network-path9;  
+    margin-left: -1em;  
+    color: rgb(6, 193, 41);
+  }
+}
+.icm-cloud-network .path10 {
+  &:before {
+    content: $icm-cloud-network-path10;  
+    margin-left: -1em;  
+    color: rgb(6, 193, 41);
+  }
+}
+.icm-cloud-network .path11 {
+  &:before {
+    content: $icm-cloud-network-path11;  
+    margin-left: -1em;  
+    color: rgb(6, 193, 41);
+  }
+}
+.icm-cloud-network .path12 {
+  &:before {
+    content: $icm-cloud-network-path12;  
+    margin-left: -1em;  
+    color: rgb(40, 40, 40);
+  }
+}
+.icm-cloud-network .path13 {
+  &:before {
+    content: $icm-cloud-network-path13;  
+    margin-left: -1em;  
+    color: rgb(6, 193, 41);
+  }
+}
+.icm-cloud-network .path14 {
+  &:before {
+    content: $icm-cloud-network-path14;  
+    margin-left: -1em;  
+    color: rgb(40, 40, 40);
+  }
+}
+.icm-cloud-network .path15 {
+  &:before {
+    content: $icm-cloud-network-path15;  
+    margin-left: -1em;  
+    color: rgb(40, 40, 40);
+  }
+}
+.icm-cloud-network .path16 {
+  &:before {
+    content: $icm-cloud-network-path16;  
+    margin-left: -1em;  
+    color: rgb(40, 40, 40);
+  }
+}
+.icm-cloud-network .path17 {
+  &:before {
+    content: $icm-cloud-network-path17;  
+    margin-left: -1em;  
+    color: rgb(40, 40, 40);
+  }
+}
+.icm-cloud-network .path18 {
+  &:before {
+    content: $icm-cloud-network-path18;  
+    margin-left: -1em;  
+    color: rgb(40, 40, 40);
+  }
+}
+.icm-cloud-network .path19 {
+  &:before {
+    content: $icm-cloud-network-path19;  
+    margin-left: -1em;  
+    color: rgb(40, 40, 40);
+  }
+}
+.icm-cloud-network .path20 {
+  &:before {
+    content: $icm-cloud-network-path20;  
+    margin-left: -1em;  
+    color: rgb(40, 40, 40);
+  }
+}
+.icm-computer .path1 {
+  &:before {
+    content: $icm-computer-path1;  
+    color: rgb(40, 40, 40);
+  }
+}
+.icm-computer .path2 {
+  &:before {
+    content: $icm-computer-path2;  
+    margin-left: -1em;  
+    color: rgb(6, 193, 41);
+  }
+}
+.icm-computer .path3 {
+  &:before {
+    content: $icm-computer-path3;  
+    margin-left: -1em;  
+    color: rgb(6, 193, 41);
+  }
+}
+.icm-conversation {
+  &:before {
+    content: $icm-conversation; 
+  }
+}
+.icm-correct {
+  &:before {
+    content: $icm-correct; 
+  }
+}
+.icm-cup-and-plate {
+  &:before {
+    content: $icm-cup-and-plate; 
+  }
+}
+.icm-debit-card {
+  &:before {
+    content: $icm-debit-card; 
+  }
+}
+.icm-delete {
+  &:before {
+    content: $icm-delete; 
+  }
+}
+.icm-email-envelope-outline-shape-with-rounded-corners {
+  &:before {
+    content: $icm-email-envelope-outline-shape-with-rounded-corners; 
+  }
+}
+.icm-eye {
+  &:before {
+    content: $icm-eye; 
+  }
+}
+.icm-friendship .path1 {
+  &:before {
+    content: $icm-friendship-path1;  
+    color: rgb(6, 193, 41);
+  }
+}
+.icm-friendship .path2 {
+  &:before {
+    content: $icm-friendship-path2;  
+    margin-left: -1em;  
+    color: rgb(40, 40, 40);
+  }
+}
+.icm-friendship .path3 {
+  &:before {
+    content: $icm-friendship-path3;  
+    margin-left: -1em;  
+    color: rgb(6, 193, 41);
+  }
+}
+.icm-friendship .path4 {
+  &:before {
+    content: $icm-friendship-path4;  
+    margin-left: -1em;  
+    color: rgb(40, 40, 40);
+  }
+}
+.icm-friendship .path5 {
+  &:before {
+    content: $icm-friendship-path5;  
+    margin-left: -1em;  
+    color: rgb(40, 40, 40);
+  }
+}
+.icm-friendship .path6 {
+  &:before {
+    content: $icm-friendship-path6;  
+    margin-left: -1em;  
+    color: rgb(6, 193, 41);
+  }
+}
+.icm-friendship .path7 {
+  &:before {
+    content: $icm-friendship-path7;  
+    margin-left: -1em;  
+    color: rgb(6, 193, 41);
+  }
+}
+.icm-friendship .path8 {
+  &:before {
+    content: $icm-friendship-path8;  
+    margin-left: -1em;  
+    color: rgb(6, 193, 41);
+  }
+}
+.icm-friendship .path9 {
+  &:before {
+    content: $icm-friendship-path9;  
+    margin-left: -1em;  
+    color: rgb(6, 193, 41);
+  }
+}
+.icm-friendship .path10 {
+  &:before {
+    content: $icm-friendship-path10;  
+    margin-left: -1em;  
+    color: rgb(6, 193, 41);
+  }
+}
+.icm-handshake {
+  &:before {
+    content: $icm-handshake; 
+  }
+}
+.icm-heartbeat {
+  &:before {
+    content: $icm-heartbeat; 
+  }
+}
+.icm-hosting {
+  &:before {
+    content: $icm-hosting; 
+  }
+}
+.icm-left-arrow-min {
+  &:before {
+    content: $icm-left-arrow-min; 
+  }
+}
+.icm-location {
+  &:before {
+    content: $icm-location; 
+  }
+}
+.icm-login .path1 {
+  &:before {
+    content: $icm-login-path1;  
+    color: rgb(40, 40, 40);
+  }
+}
+.icm-login .path2 {
+  &:before {
+    content: $icm-login-path2;  
+    margin-left: -1em;  
+    color: rgb(6, 193, 41);
+  }
+}
+.icm-login .path3 {
+  &:before {
+    content: $icm-login-path3;  
+    margin-left: -1em;  
+    color: rgb(6, 193, 41);
+  }
+}
+.icm-magnifier {
+  &:before {
+    content: $icm-magnifier; 
+  }
+}
+.icm-manager {
+  &:before {
+    content: $icm-manager; 
+  }
+}
+.icm-megaphone {
+  &:before {
+    content: $icm-megaphone; 
+  }
+}
+.icm-minus {
+  &:before {
+    content: $icm-minus; 
+  }
+}
+.icm-network .path1 {
+  &:before {
+    content: $icm-network-path1;  
+    color: rgb(6, 193, 41);
+  }
+}
+.icm-network .path2 {
+  &:before {
+    content: $icm-network-path2;  
+    margin-left: -1em;  
+    color: rgb(6, 193, 41);
+  }
+}
+.icm-network .path3 {
+  &:before {
+    content: $icm-network-path3;  
+    margin-left: -1em;  
+    color: rgb(6, 193, 41);
+  }
+}
+.icm-network .path4 {
+  &:before {
+    content: $icm-network-path4;  
+    margin-left: -1em;  
+    color: rgb(6, 193, 41);
+  }
+}
+.icm-network .path5 {
+  &:before {
+    content: $icm-network-path5;  
+    margin-left: -1em;  
+    color: rgb(6, 193, 41);
+  }
+}
+.icm-network .path6 {
+  &:before {
+    content: $icm-network-path6;  
+    margin-left: -1em;  
+    color: rgb(6, 193, 41);
+  }
+}
+.icm-network .path7 {
+  &:before {
+    content: $icm-network-path7;  
+    margin-left: -1em;  
+    color: rgb(6, 193, 41);
+  }
+}
+.icm-network .path8 {
+  &:before {
+    content: $icm-network-path8;  
+    margin-left: -1em;  
+    color: rgb(40, 40, 40);
+  }
+}
+.icm-network-2 {
+  &:before {
+    content: $icm-network-2; 
+  }
+}
+.icm-online-payment .path1 {
+  &:before {
+    content: $icm-online-payment-path1;  
+    color: rgb(40, 40, 40);
+  }
+}
+.icm-online-payment .path2 {
+  &:before {
+    content: $icm-online-payment-path2;  
+    margin-left: -1em;  
+    color: rgb(6, 193, 41);
+  }
+}
+.icm-online-payment .path3 {
+  &:before {
+    content: $icm-online-payment-path3;  
+    margin-left: -1em;  
+    color: rgb(6, 193, 41);
+  }
+}
+.icm-online-payment .path4 {
+  &:before {
+    content: $icm-online-payment-path4;  
+    margin-left: -1em;  
+    color: rgb(6, 193, 41);
+  }
+}
+.icm-online-payment .path5 {
+  &:before {
+    content: $icm-online-payment-path5;  
+    margin-left: -1em;  
+    color: rgb(40, 40, 40);
+  }
+}
+.icm-online-payment .path6 {
+  &:before {
+    content: $icm-online-payment-path6;  
+    margin-left: -1em;  
+    color: rgb(6, 193, 41);
+  }
+}
+.icm-online-payment .path7 {
+  &:before {
+    content: $icm-online-payment-path7;  
+    margin-left: -1em;  
+    color: rgb(6, 193, 41);
+  }
+}
+.icm-online-payment .path8 {
+  &:before {
+    content: $icm-online-payment-path8;  
+    margin-left: -1em;  
+    color: rgb(6, 193, 41);
+  }
+}
+.icm-online-payment .path9 {
+  &:before {
+    content: $icm-online-payment-path9;  
+    margin-left: -1em;  
+    color: rgb(6, 193, 41);
+  }
+}
+.icm-online-payment .path10 {
+  &:before {
+    content: $icm-online-payment-path10;  
+    margin-left: -1em;  
+    color: rgb(6, 193, 41);
+  }
+}
+.icm-open-book {
+  &:before {
+    content: $icm-open-book; 
+  }
+}
+.icm-paper-plane {
+  &:before {
+    content: $icm-paper-plane; 
+  }
+}
+.icm-phone-call {
+  &:before {
+    content: $icm-phone-call; 
+  }
+}
+.icm-placeholder-filled-point {
+  &:before {
+    content: $icm-placeholder-filled-point; 
+  }
+}
+.icm-protect .path1 {
+  &:before {
+    content: $icm-protect-path1;  
+    color: rgb(6, 193, 41);
+  }
+}
+.icm-protect .path2 {
+  &:before {
+    content: $icm-protect-path2;  
+    margin-left: -1em;  
+    color: rgb(40, 40, 40);
+  }
+}
+.icm-protect .path3 {
+  &:before {
+    content: $icm-protect-path3;  
+    margin-left: -1em;  
+    color: rgb(6, 193, 41);
+  }
+}
+.icm-protect .path4 {
+  &:before {
+    content: $icm-protect-path4;  
+    margin-left: -1em;  
+    color: rgb(6, 193, 41);
+  }
+}
+.icm-protect .path5 {
+  &:before {
+    content: $icm-protect-path5;  
+    margin-left: -1em;  
+    color: rgb(40, 40, 40);
+  }
+}
+.icm-protect .path6 {
+  &:before {
+    content: $icm-protect-path6;  
+    margin-left: -1em;  
+    color: rgb(6, 193, 41);
+  }
+}
+.icm-protect .path7 {
+  &:before {
+    content: $icm-protect-path7;  
+    margin-left: -1em;  
+    color: rgb(6, 193, 41);
+  }
+}
+.icm-protect .path8 {
+  &:before {
+    content: $icm-protect-path8;  
+    margin-left: -1em;  
+    color: rgb(6, 193, 41);
+  }
+}
+.icm-protect .path9 {
+  &:before {
+    content: $icm-protect-path9;  
+    margin-left: -1em;  
+    color: rgb(6, 193, 41);
+  }
+}
+.icm-protect .path10 {
+  &:before {
+    content: $icm-protect-path10;  
+    margin-left: -1em;  
+    color: rgb(6, 193, 41);
+  }
+}
+.icm-protect .path11 {
+  &:before {
+    content: $icm-protect-path11;  
+    margin-left: -1em;  
+    color: rgb(6, 193, 41);
+  }
+}
+.icm-protect .path12 {
+  &:before {
+    content: $icm-protect-path12;  
+    margin-left: -1em;  
+    color: rgb(6, 193, 41);
+  }
+}
+.icm-protect .path13 {
+  &:before {
+    content: $icm-protect-path13;  
+    margin-left: -1em;  
+    color: rgb(6, 193, 41);
+  }
+}
+.icm-public-transport-subway {
+  &:before {
+    content: $icm-public-transport-subway; 
+  }
+}
+.icm-repairing-service {
+  &:before {
+    content: $icm-repairing-service; 
+  }
+}
+.icm-road {
+  &:before {
+    content: $icm-road; 
+  }
+}
+.icm-scroll {
+  &:before {
+    content: $icm-scroll; 
+  }
+}
+.icm-shopping-cart {
+  &:before {
+    content: $icm-shopping-cart; 
+  }
+}
+.icm-smart-energy {
+  &:before {
+    content: $icm-smart-energy; 
+  }
+}
+.icm-smartphone {
+  &:before {
+    content: $icm-smartphone; 
+  }
+}
+.icm-speed .path1 {
+  &:before {
+    content: $icm-speed-path1;  
+    color: rgb(6, 193, 41);
+  }
+}
+.icm-speed .path2 {
+  &:before {
+    content: $icm-speed-path2;  
+    margin-left: -1em;  
+    color: rgb(40, 40, 40);
+  }
+}
+.icm-speed .path3 {
+  &:before {
+    content: $icm-speed-path3;  
+    margin-left: -1em;  
+    color: rgb(40, 40, 40);
+  }
+}
+.icm-speed .path4 {
+  &:before {
+    content: $icm-speed-path4;  
+    margin-left: -1em;  
+    color: rgb(40, 40, 40);
+  }
+}
+.icm-speed .path5 {
+  &:before {
+    content: $icm-speed-path5;  
+    margin-left: -1em;  
+    color: rgb(6, 193, 41);
+  }
+}
+.icm-speed .path6 {
+  &:before {
+    content: $icm-speed-path6;  
+    margin-left: -1em;  
+    color: rgb(6, 193, 41);
+  }
+}
+.icm-speed .path7 {
+  &:before {
+    content: $icm-speed-path7;  
+    margin-left: -1em;  
+    color: rgb(6, 193, 41);
+  }
+}
+.icm-speed .path8 {
+  &:before {
+    content: $icm-speed-path8;  
+    margin-left: -1em;  
+    color: rgb(6, 193, 41);
+  }
+}
+.icm-speed .path9 {
+  &:before {
+    content: $icm-speed-path9;  
+    margin-left: -1em;  
+    color: rgb(6, 193, 41);
+  }
+}
+.icm-speed .path10 {
+  &:before {
+    content: $icm-speed-path10;  
+    margin-left: -1em;  
+    color: rgb(6, 193, 41);
+  }
+}
+.icm-speed .path11 {
+  &:before {
+    content: $icm-speed-path11;  
+    margin-left: -1em;  
+    color: rgb(6, 193, 41);
+  }
+}
+.icm-speed .path12 {
+  &:before {
+    content: $icm-speed-path12;  
+    margin-left: -1em;  
+    color: rgb(6, 193, 41);
+  }
+}
+.icm-speed .path13 {
+  &:before {
+    content: $icm-speed-path13;  
+    margin-left: -1em;  
+    color: rgb(6, 193, 41);
+  }
+}
+.icm-speed .path14 {
+  &:before {
+    content: $icm-speed-path14;  
+    margin-left: -1em;  
+    color: rgb(6, 193, 41);
+  }
+}
+.icm-speed .path15 {
+  &:before {
+    content: $icm-speed-path15;  
+    margin-left: -1em;  
+    color: rgb(6, 193, 41);
+  }
+}
+.icm-startup {
+  &:before {
+    content: $icm-startup; 
+  }
+}
+.icm-tap {
+  &:before {
+    content: $icm-tap; 
+  }
+}
+.icm-three-buildings {
+  &:before {
+    content: $icm-three-buildings; 
+  }
+}
+.icm-timer {
+  &:before {
+    content: $icm-timer; 
+  }
+}
+.icm-tree {
+  &:before {
+    content: $icm-tree; 
+  }
+}
+.icm-video {
+  &:before {
+    content: $icm-video; 
+  }
+}
+.icm-video-conference .path1 {
+  &:before {
+    content: $icm-video-conference-path1;  
+    color: rgb(6, 193, 41);
+  }
+}
+.icm-video-conference .path2 {
+  &:before {
+    content: $icm-video-conference-path2;  
+    margin-left: -1em;  
+    color: rgb(40, 40, 40);
+  }
+}
+.icm-video-conference .path3 {
+  &:before {
+    content: $icm-video-conference-path3;  
+    margin-left: -1em;  
+    color: rgb(6, 193, 41);
+  }
+}
+.icm-video-conference .path4 {
+  &:before {
+    content: $icm-video-conference-path4;  
+    margin-left: -1em;  
+    color: rgb(6, 193, 41);
+  }
+}
+.icm-video-conference .path5 {
+  &:before {
+    content: $icm-video-conference-path5;  
+    margin-left: -1em;  
+    color: rgb(6, 193, 41);
+  }
+}
+.icm-video-conference .path6 {
+  &:before {
+    content: $icm-video-conference-path6;  
+    margin-left: -1em;  
+    color: rgb(6, 193, 41);
+  }
+}
+.icm-video-conference .path7 {
+  &:before {
+    content: $icm-video-conference-path7;  
+    margin-left: -1em;  
+    color: rgb(6, 193, 41);
+  }
+}
+.icm-video-conference .path8 {
+  &:before {
+    content: $icm-video-conference-path8;  
+    margin-left: -1em;  
+    color: rgb(6, 193, 41);
+  }
+}
+.icm-waiting {
+  &:before {
+    content: $icm-waiting; 
+  }
+}
+.icm-wallet {
+  &:before {
+    content: $icm-wallet; 
+  }
+}
+.icm-wifi {
+  &:before {
+    content: $icm-wifi; 
+  }
+}
+.icm-wireless-internet .path1 {
+  &:before {
+    content: $icm-wireless-internet-path1;  
+    color: rgb(6, 193, 41);
+  }
+}
+.icm-wireless-internet .path2 {
+  &:before {
+    content: $icm-wireless-internet-path2;  
+    margin-left: -1em;  
+    color: rgb(6, 193, 41);
+  }
+}
+.icm-wireless-internet .path3 {
+  &:before {
+    content: $icm-wireless-internet-path3;  
+    margin-left: -1em;  
+    color: rgb(40, 40, 40);
+  }
+}
+.icm-wireless-internet .path4 {
+  &:before {
+    content: $icm-wireless-internet-path4;  
+    margin-left: -1em;  
+    color: rgb(40, 40, 40);
+  }
+}
+.icm-wireless-internet .path5 {
+  &:before {
+    content: $icm-wireless-internet-path5;  
+    margin-left: -1em;  
+    color: rgb(40, 40, 40);
+  }
+}
+

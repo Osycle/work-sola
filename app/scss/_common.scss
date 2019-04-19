@@ -22,6 +22,7 @@ $color-gray-1: #ededed; //#bdbdbd
 $color-gray-2: #bdbdbd;
 $color-gray-3: #5e5e5e;
 $color-gray-4: #282828;
+$color-gray-5: #f8f8f8;
 
 
 
@@ -386,8 +387,8 @@ table {
 .img{
 	background-repeat: no-repeat;
 }
-.shadow-default{
-	box-shadow: 0 0 26px -3px rgba(black, 0.6);
+.shadow-def{
+	box-shadow: 0 0 20px -4px rgba(black, 0.2);
 }
 .shadow-row{
 	box-shadow: 0 5px 40px -15px rgba(0, 0, 0, 0.8);
@@ -467,7 +468,8 @@ table {
 
 .cell-hover{
 	opacity: 0;
-	padding: 0 5%;
+	padding-right: 5%;
+	padding-left: 5%;
 	//background-color: rgba(black, 0.7);
 	background: linear-gradient(135deg, #06c129, transparent 120%);
 	background-clip: border-box;
@@ -492,7 +494,6 @@ table {
 		color: white;
 		opacity: 0;
 		transition: all 0.3s ease-in-out;
-		padding: 0 5%;
 		&>div{
 			width: 100%;
 		}
@@ -603,6 +604,10 @@ table {
 	box-shadow: 0px 6px 40px -10px $color-1;
 	*{
 		color: inherit;
+	}
+	small{
+		font-weight: 700;
+		font-size: 0.75em;
 	}
 	&:not([class*="color-"]):not([class*="bg-color"]){
 		color: white;
@@ -781,7 +786,7 @@ table {
 
 .parag-gray{
 	p:not([class*="color"]){
-		color: #5e5e5e;//4e5860
+		color: $color-gray-3;
 	}
 }
 
@@ -937,38 +942,38 @@ h1, h2, h3, h4{
 	position: relative;	
 }
 h1{
-	font-size: em(48, 15);
+	font-size: em(48, 16);
 	margin-bottom: 15px;
 	font-weight: 900;
 	line-height: 120%;
 	@media (max-width: 991px) {
-		font-size: em(26, 15);
+		font-size: em(26, 16);
 	}
 }
 h2{
-	font-size: em(25, 15);
+	font-size: em(28, 16);
 	margin-bottom: 15px;
 	font-weight: 800;
-	text-transform: uppercase;
 	@media (max-width: 430px) {
-		font-size: em(18/1.2, 15);
+		font-size: em(23, 16);
 	}
 } 
 h3{
 	font-weight: 600;
-	font-size: em(20, 15);
+	text-transform: uppercase;
+	font-size: em(20, 16);
 	@media (max-width: 430px) {
 		font-size: em(17/1.1, 15);
 	}
 }
 h4{
 	font-weight: 700;
-	font-size: em(18, 15);
+	font-size: em(18, 16);
 }
 h5{	
 	line-height: 150%;
 	font-weight: 700;
-	font-size: em(14, 15);
+	font-size: em(15, 16);
 }
 
 .h-style-1{
@@ -1057,12 +1062,22 @@ hr{
 	border-color: rgba(165, 165, 165, 0.62);
 }
 
-
+.viewnamefile{
+	text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
 .text-item{
 	@extend .parag-gray;
 	line-height: 170%;
 	p{
 		margin-bottom: 15px;
+		b{
+			color: black;
+		}
+		@media (min-width: 1600){
+			margin-bottom: 30px;
+		}
 	}
 }
 

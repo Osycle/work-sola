@@ -62,7 +62,7 @@
 	*{
 		letter-spacing: 0;
 	}
-	$mrow: 1.29;
+	$mrow: 1;
 	//$mrow : ( (100 - $width)/($items*2) );
 	$wid: (100-$mrow*($items*2))/$items;
 

@@ -12,9 +12,11 @@ $header-top-height: 110px;
 	left: 0;
 	position: fixed;
 	pointer-events: none;
-	background-color: transparent;
 	color: white;
 	//font-family: $font-family-1;
+	&:not([class*="bg-color"]){
+		background-color: transparent;
+	}
 	*{
 		pointer-events: auto;
 	}
@@ -52,6 +54,7 @@ $header-top-height: 110px;
 .header-top-content{
 	height: $header-top-height;
 	//overflow: hidden;
+	white-space: nowrap;
 	&.align-i-center{
 		flex-wrap: nowrap;
 	}
