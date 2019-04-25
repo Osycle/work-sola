@@ -362,7 +362,7 @@ figcaption{
 			justify-content: center;
 			border-radius: 10px;
 			min-height: 260px;
-			padding: 15px 15px;
+			padding: 15px 20px;
 			position: relative;
 			background-color: white;
 			border: 1px solid $color-gray-1;
@@ -1483,6 +1483,34 @@ figcaption{
 			position: absolute;
 			bottom: -1px;
 			right: 0;
+		}
+	}
+}
+
+
+
+
+
+
+//sola-free
+.sola-free{
+	background-image: url('../img/bg/bg-feedback.jpg');
+	background-position: bottom right;
+	background-repeat: no-repeat;
+	.short-advantages-items{
+		figure{
+			.wrapper>div{
+				min-height: 180px;
+			}
+		}
+		.icm{
+			height: 80px;
+    	font-size: 80px;
+		}
+	}
+	@media (min-width: 992px) {
+		.short-feedback-img{
+			padding-top: 140px;
 		}
 	}
 }
