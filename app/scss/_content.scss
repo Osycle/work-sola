@@ -1500,7 +1500,7 @@ figcaption{
 	.short-advantages-items{
 		figure{
 			.wrapper>div{
-				min-height: 180px;
+				min-height: 190px;
 			}
 		}
 		.icm{
@@ -1511,6 +1511,44 @@ figcaption{
 	@media (min-width: 992px) {
 		.short-feedback-img{
 			padding-top: 140px;
+		}
+	}
+}
+.traderoutes-accordion{
+	.icm{
+		color: $color-1;
+	}
+	.panel{
+		margin: 0 !important;
+	}
+	.tab-body{
+		padding: 10px 15px;
+		li{
+			margin: 0px 0;
+			padding: 10px 0; 
+			&:not(:nth-last-child){
+				border-bottom: 1px solid $color-gray-2;
+			}
+			&:hover{
+				color: $color-1;
+				cursor: pointer;
+			}
+		}
+	}
+	.panel-title{
+		a{
+			border-radius: 5px;
+			display: block;
+			padding: 10px 15px;
+			border: 1px solid $color-gray-1;
+			color: black;
+			&[aria-expanded="true"]{
+				background-color: $color-1;
+				color: white;
+				.icm{
+					color: white;
+				}
+			}
 		}
 	}
 }

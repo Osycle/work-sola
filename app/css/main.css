@@ -10739,13 +10739,43 @@ figcaption {
   background-position: bottom right;
   background-repeat: no-repeat; }
   .sola-free .short-advantages-items figure .wrapper > div {
-    min-height: 180px; }
+    min-height: 190px; }
   .sola-free .short-advantages-items .icm {
     height: 80px;
     font-size: 80px; }
   @media (min-width: 992px) {
     .sola-free .short-feedback-img {
       padding-top: 140px; } }
+
+.traderoutes-accordion .icm {
+  color: #06c129; }
+
+.traderoutes-accordion .panel {
+  margin: 0 !important; }
+
+.traderoutes-accordion .tab-body {
+  padding: 10px 15px; }
+  .traderoutes-accordion .tab-body li {
+    margin: 0px 0;
+    padding: 10px 0; }
+    .traderoutes-accordion .tab-body li:not(:nth-last-child) {
+      border-bottom: 1px solid #bdbdbd; }
+    .traderoutes-accordion .tab-body li:hover {
+      color: #06c129;
+      cursor: pointer; }
+
+.traderoutes-accordion .panel-title a {
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  display: block;
+  padding: 10px 15px;
+  border: 1px solid #ededed;
+  color: black; }
+  .traderoutes-accordion .panel-title a[aria-expanded="true"] {
+    background-color: #06c129;
+    color: white; }
+    .traderoutes-accordion .panel-title a[aria-expanded="true"] .icm {
+      color: white; }
 
 /* 
 		_footer.scss
