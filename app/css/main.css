@@ -10754,10 +10754,12 @@ figcaption {
   margin: 0 !important; }
 
 .traderoutes-accordion .tab-body {
-  padding: 10px 15px; }
+  padding: 10px 15px;
+  max-height: 280px;
+  overflow-y: auto; }
   .traderoutes-accordion .tab-body li {
     margin: 0px 0;
-    padding: 10px 0; }
+    padding: 10px 15px; }
     .traderoutes-accordion .tab-body li:not(:nth-last-child) {
       border-bottom: 1px solid #bdbdbd; }
     .traderoutes-accordion .tab-body li:hover {
@@ -10776,6 +10778,11 @@ figcaption {
     color: white; }
     .traderoutes-accordion .panel-title a[aria-expanded="true"] .icm {
       color: white; }
+
+.siderbarmap-map {
+  width: 100%;
+  z-index: 1;
+  height: 600px; }
 
 /* 
 		_footer.scss

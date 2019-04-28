@@ -1523,9 +1523,11 @@ figcaption{
 	}
 	.tab-body{
 		padding: 10px 15px;
+		max-height: 280px;
+		overflow-y: auto;
 		li{
 			margin: 0px 0;
-			padding: 10px 0; 
+			padding: 10px 15px; 
 			&:not(:nth-last-child){
 				border-bottom: 1px solid $color-gray-2;
 			}
@@ -1551,4 +1553,10 @@ figcaption{
 			}
 		}
 	}
+}
+
+.siderbarmap-map{
+	width: 100%;
+	z-index: 1;
+	height: 600px;
 }

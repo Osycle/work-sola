@@ -294,24 +294,24 @@
 					<div class="row">
 						<div class="column-1 col-md-4 p-h-15 m-v-30">
 							<div class="searchmap-accordion">
+								<h2 class="color-gray-2">Доступные точки доступа</h2>
 									<div class="traderoutes-accordion panel-group p-r-offset" id="accordion">
 
 									  <div class="panel">
 								      <h4 class="panel-title">
-								        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#traderoutesAccordion_1" aria-expanded="true">
+								        <a class="typelink" data-type-link="typeall" data-toggle="collapse" data-parent="#accordion" href="#traderoutesAccordion_1" aria-expanded="true">
 													<span class="icm icm-wifi p-r-15"></span>Все наши точки доступа
 								        </a>
 								      </h4>
-									    <div id="traderoutesAccordion_1" class="panel-collapse collapse in" role="tabpanel">
-									      <div class="tab-body">
-									      </div>
+								      <div id="traderoutesAccordion_1" class="panel-collapse collapse" role="tabpanel">
+								        <ul class="tab-body"></ul>
 									    </div>
 									  </div>
 
-									  <div class="panel" data-type-container="airports">
+									  <div class="panel" data-type-container="centre">
 								      <h4 class="panel-title">
-								        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#traderoutesAccordion_2" aria-expanded="false">
-													<span class="icm icm-heartbeat p-r-15"></span>Аэропорты
+								        <a class="typelink" data-type-link="centre" data-toggle="collapse" data-parent="#accordion" href="#traderoutesAccordion_2" aria-expanded="false">
+													<span class="icm icm-shopping-cart p-r-15"></span>Торговые центы
 								        </a>
 								      </h4>
 									    <div id="traderoutesAccordion_2" class="panel-collapse collapse" role="tabpanel">
@@ -319,10 +319,10 @@
 									    </div>
 									  </div>
 
-									  <div class="panel" data-type-container="business">
+									  <div class="panel" data-type-container="university">
 								      <h4 class="panel-title">
-								        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#traderoutesAccordion_3" aria-expanded="false">
-													<span class="icm icm-heartbeat p-r-15"></span>Бизнес центры
+								        <a class="typelink" data-type-link="university" data-toggle="collapse" data-parent="#accordion" href="#traderoutesAccordion_3" aria-expanded="false">
+													<span class="icm icm-open-book p-r-15"></span>Учебные учреждения
 								        </a>
 								      </h4>
 									    <div id="traderoutesAccordion_3" class="panel-collapse collapse" role="tabpanel">
@@ -330,10 +330,10 @@
 									    </div>
 									  </div>
 
-									  <div class="panel" data-type-container="stations">
+									  <div class="panel" data-type-container="markets">
 								      <h4 class="panel-title">
-								        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#traderoutesAccordion_4" aria-expanded="false">
-													<span class="icm icm-heartbeat p-r-15"></span>Вокзалы
+								        <a class="typelink" data-type-link="markets" data-toggle="collapse" data-parent="#accordion" href="#traderoutesAccordion_4" aria-expanded="false">
+													<span class="icm icm-open-book p-r-15"></span>Рынки
 								        </a>
 								      </h4>
 									    <div id="traderoutesAccordion_4" class="panel-collapse collapse" role="tabpanel">
@@ -341,16 +341,107 @@
 									    </div>
 									  </div>
 
-									  <div class="panel" data-type-container="cafe">
+									  <div class="panel" data-type-container="medicine">
 								      <h4 class="panel-title">
-								        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#traderoutesAccordion_5" aria-expanded="false">
-													<span class="icm icm-heartbeat p-r-15"></span>Медицинские учреждения 
+								        <a class="typelink" data-type-link="medicine" data-toggle="collapse" data-parent="#accordion" href="#traderoutesAccordion_5" aria-expanded="false">
+													<span class="icm icm-heartbeat p-r-15"></span>Медицинские учреждения
 								        </a>
 								      </h4>
 									    <div id="traderoutesAccordion_5" class="panel-collapse collapse" role="tabpanel">
 								        <ul class="tab-body"></ul>
 									    </div>
 									  </div>
+
+									  <div class="panel" data-type-container="stations">
+								      <h4 class="panel-title">
+								        <a class="typelink" data-type-link="stations" data-toggle="collapse" data-parent="#accordion" href="#traderoutesAccordion_6" aria-expanded="false">
+													<span class="icm icm-public-transport-subway p-r-15"></span>Вокзалы
+								        </a>
+								      </h4>
+									    <div id="traderoutesAccordion_6" class="panel-collapse collapse" role="tabpanel">
+								        <ul class="tab-body"></ul>
+									    </div>
+									  </div>
+									  
+									  <div class="panel" data-type-container="parks">
+								      <h4 class="panel-title">
+								        <a class="typelink" data-type-link="parks" data-toggle="collapse" data-parent="#accordion" href="#traderoutesAccordion_7" aria-expanded="false">
+													<span class="icm icm-tree p-r-15"></span>Парки
+								        </a>
+								      </h4>
+									    <div id="traderoutesAccordion_7" class="panel-collapse collapse" role="tabpanel">
+								        <ul class="tab-body"></ul>
+									    </div>
+									  </div>
+
+									  <div class="panel" data-type-container="business">
+								      <h4 class="panel-title">
+								        <a class="typelink" data-type-link="business" data-toggle="collapse" data-parent="#accordion" href="#traderoutesAccordion_8" aria-expanded="false">
+													<span class="icm icm-three-buildings p-r-15"></span>Бизнес центры
+								        </a>
+								      </h4>
+									    <div id="traderoutesAccordion_8" class="panel-collapse collapse" role="tabpanel">
+								        <ul class="tab-body"></ul>
+									    </div>
+									  </div>
+
+									  <div class="panel" data-type-container="airports">
+								      <h4 class="panel-title">
+								        <a class="typelink" data-type-link="airports" data-toggle="collapse" data-parent="#accordion" href="#traderoutesAccordion_9" aria-expanded="false">
+													<span class="icm icm-airplane-shape p-r-15"></span>Аэропорты
+								        </a>
+								      </h4>
+									    <div id="traderoutesAccordion_9" class="panel-collapse collapse" role="tabpanel">
+								        <ul class="tab-body"></ul>
+									    </div>
+									  </div>
+									  
+									  <div class="panel" data-type-container="streets">
+								      <h4 class="panel-title">
+								        <a class="typelink" data-type-link="streets" data-toggle="collapse" data-parent="#accordion" href="#traderoutesAccordion_10" aria-expanded="false">
+													<span class="icm icm-road p-r-15"></span>Улицы
+								        </a>
+								      </h4>
+									    <div id="traderoutesAccordion_10" class="panel-collapse collapse" role="tabpanel">
+								        <ul class="tab-body"></ul>
+									    </div>
+									  </div>
+									   
+									  <div class="panel" data-type-container="cafe">
+								      <h4 class="panel-title">
+								        <a class="typelink" data-type-link="cafe" data-toggle="collapse" data-parent="#accordion" href="#traderoutesAccordion_11" aria-expanded="false">
+													<span class="icm icm-cup-and-plate p-r-15"></span>Кафе и Рестораны
+								        </a>
+								      </h4>
+									    <div id="traderoutesAccordion_11" class="panel-collapse collapse" role="tabpanel">
+								        <ul class="tab-body"></ul>
+									    </div>
+									  </div>
+
+									  <div class="panel" data-type-container="other">
+								      <h4 class="panel-title">
+								        <a class="typelink" data-type-link="other" data-toggle="collapse" data-parent="#accordion" href="#traderoutesAccordion_12" aria-expanded="false">
+													<span class="icm icm-repairing-service p-r-15"></span>Прочие
+								        </a>
+								      </h4>
+									    <div id="traderoutesAccordion_12" class="panel-collapse collapse" role="tabpanel">
+								        <ul class="tab-body"></ul>
+									    </div>
+									  </div>
+
+								  	<div class="panel" data-type-container="planning">
+								      <h4 class="panel-title">
+								        <a class="typelink" data-type-link="planning" data-toggle="collapse" data-parent="#accordion" href="#traderoutesAccordion_13" aria-expanded="false">
+													<span class="icm icm-waiting p-r-15"></span>Скоро
+								        </a>
+								      </h4>
+									    <div id="traderoutesAccordion_13" class="panel-collapse collapse" role="tabpanel">
+								        <ul class="tab-body"></ul>
+									    </div>
+									  </div>
+
+
+
 
 									</div>
 							</div>
@@ -359,22 +450,22 @@
 					    <div class="map_wrap">
 					    <div class="siderbarmap">
 				        <ul>
-			            <input class="typelink" type="checkbox" data-type="airports" checked="checked"></input>
-			            <input class="typelink" type="checkbox" data-type="business" checked="checked"></input>
-			            <input class="typelink" type="checkbox" data-type="stations" checked="checked"></input>
-			            <input class="typelink" type="checkbox" data-type="cafe" checked="checked"></input>
-			            <input class="typelink" type="checkbox" data-type="медицина" checked="checked"></input>
-			            <input class="typelink" type="checkbox" data-type="Parks" checked="checked"></input>
-			            <input class="typelink" type="checkbox" data-type="прочие" checked="checked"></input>
-			            <input class="typelink" type="checkbox" data-type="Markets" checked="checked"></input>
-			            <input class="typelink" type="checkbox" data-type="planning" checked="checked"></input>
-			            <input class="typelink" type="checkbox" data-type="centre" checked="checked"></input>
-			            <input class="typelink" type="checkbox" data-type="улицы" checked="checked"></input>
-			            <input class="typelink" type="checkbox" data-type="University" checked="checked"></input>
+<!-- 			            <input class="typelink" type="checkbox" data-type-link="airports" checked="checked"></input>
+			            <input class="typelink" type="checkbox" data-type-link="business" checked="checked"></input>
+			            <input class="typelink" type="checkbox" data-type-link="stations" checked="checked"></input>
+			            <input class="typelink" type="checkbox" data-type-link="cafe" checked="checked"></input>
+			            <input class="typelink" type="checkbox" data-type-link="medicine" checked="checked"></input>
+			            <input class="typelink" type="checkbox" data-type-link="parks" checked="checked"></input>
+			            <input class="typelink" type="checkbox" data-type-link="other" checked="checked"></input>
+			            <input class="typelink" type="checkbox" data-type-link="markets" checked="checked"></input>
+			            <input class="typelink" type="checkbox" data-type-link="planning" checked="checked"></input>
+			            <input class="typelink" type="checkbox" data-type-link="centre" checked="checked"></input>
+			            <input class="typelink" type="checkbox" data-type-link="streets" checked="checked"></input>
+			            <input class="typelink" type="checkbox" data-type-link="university" checked="checked"></input> -->
 				        </ul>
 					    </div>
 					    <input id="pac-input" class="controls" type="text" placeholder="Search Box">
-					    <div id="map" style="width:100%;height:400px; z-index: 1;"></div>
+					    <div id="map" class="siderbarmap-map"></div>
 						</div>
 					</div>
 				</div>

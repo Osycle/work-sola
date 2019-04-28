@@ -22,40 +22,40 @@ function xmlParse(str) {
 var infoWindow = new google.maps.InfoWindow();
 var customIcons = {
 	"airports": {
-		icon: 'https://www.sola.uz/third.png'
+		icon: 'img/mapmarkers/airports.png'
 	},
 	"business": {
-		icon: 'https://www.sola.uz/third.png'
+		icon: 'img/mapmarkers/business.png'
 	},
 	"stations": {
-		icon: 'https://www.sola.uz/third.png'
+		icon: 'img/mapmarkers/stations.png'
 	},
 	"cafe": {
-		icon: 'https://www.sola.uz/third.png'
+		icon: 'img/mapmarkers/cafe.png'
 	},
-	"медицина": {
-		icon: 'https://www.sola.uz/third.png'
+	"medicine": {
+		icon: 'img/mapmarkers/medicine.png'
 	},
-	"Parks": {
-		icon: 'https://www.sola.uz/third.png'
+	"parks": {
+		icon: 'img/mapmarkers/parks.png'
 	},
-	"прочие": {
-		icon: 'https://www.sola.uz/third.png'
+	"other": {
+		icon: 'img/mapmarkers/other.png'
 	},
-	"Markets": {
-		icon: 'https://www.sola.uz/third.png'
+	"markets": {
+		icon: 'img/mapmarkers/markets.png'
 	},
 	"planning": {
-		icon: 'https://www.sola.uz/third.png'
+		icon: 'img/mapmarkers/planning.png'
 	},
 	"centre": {
-		icon: 'https://www.sola.uz/third.png'
+		icon: 'img/mapmarkers/centre.png'
 	},
-	"улицы": {
-		icon: 'https://www.sola.uz/third.png'
+	"streets": {
+		icon: 'img/mapmarkers/streets.png'
 	},
-	"University": {
-		icon: 'https://www.sola.uz/third.png'
+	"university": {
+		icon: 'img/mapmarkers/university.png'
 	}
 };
 
@@ -64,14 +64,14 @@ var markerGroups = {
 		"business": [],
 		"stations": [],
 		"cafe": [],
-		"медицина": [],
-		"Parks": [],
-		"прочие": [],
-		"Markets": [],
+		"medicine": [],
+		"parks": [],
+		"other": [],
+		"markets": [],
 		"planning": [],
 		"centre": [],
-		"улицы": [],
-		"University": []
+		"streets": [],
+		"university": []
 };
 
 function load() {
@@ -91,7 +91,7 @@ function load() {
 			//var xml = data.responseXML;
 			data = JSON.parse(data);
 			// var markers = $(data).find("marker");
-			console.log(data);
+			//console.log(data);
 			for (var i = 0; i < data.length; i++) {
 				dataItem = data[i];
 			 	var address = '';
@@ -123,15 +123,17 @@ function createMarker(point, name, address, type, map, subType) {
 		// shadow: icon.shadow,
 		type: type
 	});
-	if (!markerGroups[type]) markerGroups[type] = [];
-	if (!markerGroups[type][subType]) markerGroups[type][subType] = [];
-	markerGroups[type].push(subType);
-	markerGroups[type][subType].push(marker);
 
+	if (!markerGroups[type]) markerGroups[type] = [];
+
+	//if (!markerGroups[type][subType]) markerGroups[type][subType] = [];
+	markerGroups[type].push(marker);
+	marker["typeid"] = subType;
+	//console.log(marker); 
 
 	$("[data-type-container='"+type+"']")
 	.find(".tab-body")
-	.append("<li data-type-parent='"+type+"' data-type-sub='"+subType+"'>"+name+"</li>");
+	.append("<li data-type='"+type+"' data-locality='"+ subType +"'>"+name+"</li>");
 
 	var html = "<b>" + name + "</b> <br/>" + address;
 	bindInfoWindow(marker, map, infoWindow, html);
@@ -139,18 +141,56 @@ function createMarker(point, name, address, type, map, subType) {
 }
 
 function toggleGroup(type) {
-	for (var i = 0; i < markerGroups[type].length; i++) {
-		var marker = markerGroups[type][i];
-		if (!marker.getVisible()) {
-			marker.setVisible(true);
-		} else {
-			marker.setVisible(false);
-		}
+
+	var typelinks = $(".typelink:not([data-type-link='typeall'])");
+
+	if( type == "typeall" ){
+		typelinks.map(function(i, el){
+			var type = $(el).attr("data-type-link");
+			//console.log(markerGroups[type]);
+			try{
+				for (var i = 0; i < markerGroups[type].length; i++) {
+					var marker = markerGroups[type][i];
+					if( $("[data-type-link='typeall']").hasClass("is-selected") )
+						marker.setVisible(true);
+					else
+						marker.setVisible(false);
+				}
+			}catch(e){
+				console.log(e);
+			}
+		})
+		return;
 	}
+
+		typelinks.map(function(i, el){
+			var type = $(el).attr("data-type-link");
+			//console.log(markerGroups[type]);
+			for (var i = 0; i < markerGroups[type].length; i++) {
+				var marker = markerGroups[type][i];
+				marker.setVisible(false);
+				if( $(el).hasClass("is-selected") )
+					marker.setVisible(true);
+				else
+					marker.setVisible(false);
+			}
+
+		})
+
+
+	// for (var i = 0; i < markerGroups[type].length; i++) {
+	// 	var marker = markerGroups[type][i];
+	// 	if (!marker.getVisible()) {
+	// 		marker.setVisible(true);
+	// 	} else {
+	// 		marker.setVisible(false);
+	// 	}
+	// }
+
 }
 
 function bindInfoWindow(marker, map, infoWindow, html) {
-	console.log(html);
+	//console.log(html);
 	google.maps.event.addListener(marker, 'click', function() {
 		infoWindow.setContent(html);
 		infoWindow.open(map, marker);
@@ -169,16 +209,26 @@ google.maps.event.addDomListener(window, 'load', load);
 
 
 $(".typelink").on("click", function(){
-	var type = $(this).attr("data-type");
+	var type = $(this).attr("data-type-link");
+
+	if( !($(this).hasClass("is-selected")) )
+		$(".typelink").removeClass("is-selected");
+
+	$(this).toggleClass("is-selected");
+	console.log(this);
 	toggleGroup(type);
 })
-$(".panel .tab-body").on("click", "li", function(){
+$(".searchmap .panel .tab-body").on("click", "li", function(){
 	
-	var typeParent = $(this).attr("data-type-parent");
-	var typeSub = $(this).attr("data-type-sub");
-	var marker = markerGroups[typeParent][typeSub][0];
-	console.log(marker);
+	var typeParent = $(this).attr("data-type");
+	var typeSub = $(this).attr("data-locality");
+	var marker = markerGroups[typeParent];
+	$(markerGroups[typeParent]).map(function(i, el){
+		console.log(i,el);
+		if(el.typeid == typeSub)
+			google.maps.event.trigger(el, "click");
+	})
+	console.log(markerGroups[typeParent]);
 //	infoWindow.open(map, markerGroups["business"].businessT2[0]);
 
-	google.maps.event.trigger(marker, "click");
 })
