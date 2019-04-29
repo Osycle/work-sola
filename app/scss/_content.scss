@@ -1487,7 +1487,19 @@ figcaption{
 	}
 }
 
-
+//free-tariff
+.free-tariff{
+	@extend .for-home;
+	padding-top: 30px;
+	background-color: $color-gray-5;
+	padding-bottom: 60px;
+	position: relative;
+	@media (min-width: 992px) {
+		margin-top: 30px;
+		margin-bottom: 30px;
+		clip-path: polygon(73% 10%, 100% 10%, 100% 50%, 100% 100%, 30% 100%, 27% 90%, 0 90%, 0 0, 70% 0);
+	}
+}
 
 
 
@@ -1515,19 +1527,25 @@ figcaption{
 	}
 }
 .traderoutes-accordion{
+	margin-top: 35px;
 	.icm{
 		color: $color-1;
 	}
 	.panel{
 		margin: 0 !important;
+		&:nth-child(1){
+			.tab-body{
+				padding: 0;
+			}
+		}
 	}
 	.tab-body{
 		padding: 10px 15px;
-		max-height: 280px;
+		max-height: 210px;
 		overflow-y: auto;
 		li{
 			margin: 0px 0;
-			padding: 10px 15px; 
+			padding: 10px 0; 
 			&:not(:nth-last-child){
 				border-bottom: 1px solid $color-gray-2;
 			}
@@ -1535,18 +1553,37 @@ figcaption{
 				color: $color-1;
 				cursor: pointer;
 			}
+			a{
+				transition: all 0.3s ease;
+				border-radius: 5px;
+				display: block;
+				padding: 3px 15px;
+				&[aria-expanded="true"]{
+					background: linear-gradient(to right, darken($color-gray-5, 5%), transparent);
+					color: $color-1;
+				}
+			}
+		}
+		p{
+			color: $color-gray-3;
+			padding: 3px 15px;
+			margin-top: 10px;
+			margin-bottom: 10px;
+			font-size: em(13, 16);
 		}
 	}
 	.panel-title{
 		a{
 			border-radius: 5px;
 			display: block;
-			padding: 10px 15px;
+			padding: 12px 15px;
 			border: 1px solid $color-gray-1;
 			color: black;
 			&[aria-expanded="true"]{
 				background-color: $color-1;
 				color: white;
+				box-shadow: 0 4px 15px -2px rgba($color-1, 0.5);
+				border-color: transparent;
 				.icm{
 					color: white;
 				}
@@ -1554,9 +1591,120 @@ figcaption{
 		}
 	}
 }
+.searchmap{
+	.searchmap-wrapper{
+		display: flex;
+		height: 1030px;
+	}
+	.container-fluid-page{
+		border-radius: 10px;
+		@media (min-width: 991px) {
+		}
+	}
+	.column-1, .column-2{
+		float: none;
+	}
+	.column-1{
+		@extend .shadow-def;
+		background-color: white;
+		border-radius: 10px 0 0 10px;
+		padding: 40px 70px;
+	}
+	.column-2{
+		background-color: $color-gray-5;
+		border-radius: 0 10px 10px 0;
+		padding: 10px 0;
+		height: 100%;
+	}
 
+}
+.searchmap-search-container{
+	h2{
+		min-width: 320px;
+	}
+	.wrapper{
+		padding: 30px 40px;
+		display: flex;
+		align-items: center;
+	}
+}
+.searchmap-search{
+	padding: 0 30px;
+	width: 100%;
+	.search-input{
+    input{
+    	@include placeholder-color($color-gray-3);
+    	height: 40px;
+    }
+	}
+	button{
+		background-color: $color-1;
+		color: white;
+		width: 120px;
+    padding: 5px 15px;
+    position: absolute;
+	  font-size: 1em;
+	  font-weight: 700; 
+	  border-radius: 5px;
+	  box-shadow:  0 0 10px -2px rgba($color-1, 0.5);
+	  text-transform: uppercase;
+    top: 0;
+    right: 0px;
+    height: 100%;
+    transition: filter 0.3s ease;
+    border: 0;
+    &:active{
+    	filter: brightness(80%);
+    }
+	}
+}
 .siderbarmap-map{
 	width: 100%;
 	z-index: 1;
-	height: 600px;
+	height: calc(100% - 115px);
+	b{
+		big{
+			color: $color-1;
+		}
+	}
+}
+.schema-link{
+	color: $color-1;
+	font-weight: 600;
+	display: block;
+	padding: 0 15px;
+	text-align: right;
+	.fa{
+		vertical-align: bottom;
+	}
+}
+.schema-modal{
+	&~#page{
+		filter: blur(5px);
+	}
+	.fancybox-bg{
+		background-color: rgba(black, 0.1) !important;
+	}
+}
+.marker-notify{
+	padding: 10px 15px;
+	text-align: center;
+	font-size: 1.1em;
+	h2{
+		font-weight: 500;
+	}
+	.img-content{
+		margin-top: 15px;
+		margin-bottom: 15px;
+	}
+	.img{
+		height: 150px;
+		background-position: center;
+		background-size: contain;
+	}
+	.marker-notify-time{
+		font-weight: 600;
+		font-size: 1.1em;
+		color: $color-1;
+	}
 }

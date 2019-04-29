@@ -94,13 +94,21 @@ function load() {
 			//console.log(data);
 			for (var i = 0; i < data.length; i++) {
 				dataItem = data[i];
-			 	var address = '';
 				var point = new google.maps.LatLng( dataItem.lat, dataItem.lng);
 
 				
-				var content = "<b>" + dataItem.title + "</b> <br/>" + address;
+				var content = 
+											'<div class="marker-notify">'+
+												'<div class="img-content"><img src="'+dataItem.logo+'" /></div>'+
+												'<h2>' + dataItem.title + '</h2>'+
+												'<p>Время работы</p>'+
+												'<p class="marker-notify-time">'+dataItem.dateTime+'</p>'+
+											'</div>'
+
+											;
+				;
 				// var icon = customIcons[type] || {};
-				var marker = createMarker(point, dataItem.title, address, dataItem.type, map, dataItem.type+"T"+(i+1));
+				var marker = createMarker(point, dataItem.title, dataItem.type, map, dataItem.type+"T"+(i+1));
 				bindInfoWindow(marker, map, infoWindow, content);
 			}
 		},
@@ -114,7 +122,7 @@ function load() {
 
 }
 
-function createMarker(point, name, address, type, map, subType) {
+function createMarker(point, name, type, map, subType) {
 	var icon = customIcons[type] || {};
 	var marker = new google.maps.Marker({
 		map: map,
@@ -132,11 +140,18 @@ function createMarker(point, name, address, type, map, subType) {
 	//console.log(marker); 
 
 	$("[data-type-container='"+type+"']")
-	.find(".tab-body")
-	.append("<li data-type='"+type+"' data-locality='"+ subType +"'>"+name+"</li>");
+	.find(".tab-body").attr("id", type)
+	.append(
+			'<li data-type="'+type+'" data-locality="'+subType+'">'+
+				'<a data-toggle="collapse" href="#'+subType+'" class="collapsed" data-parent="#'+type+'">'+name+'</a>'+
+				'<div id="'+subType+'" class="collapse locality-info">'+
+					'<p>В этом блоке мы рекомендуем разместить информацию о Вашей организации, подчеркнуть ее значимость и надежность на рынке оказываемых услуг или предлагаемых товаров.</p>'+
+					'<span class="schema-link" data-src="img/other/schema.jpg" data-fancybox  data-options=\'{"baseClass": "schema-modal"}\' >Посмотреть схему <i class="fa fa-caret-right"></i></span>'+
+				'</div>'+
+			'</li>');
 
-	var html = "<b>" + name + "</b> <br/>" + address;
-	bindInfoWindow(marker, map, infoWindow, html);
+	//var html = "<b>" + name + "</b> <br/>";
+	//bindInfoWindow(marker, map, infoWindow, html);
 	return marker;
 }
 
@@ -199,8 +214,6 @@ function bindInfoWindow(marker, map, infoWindow, html) {
 
 
 
-
-function doNothing() {}
 google.maps.event.addDomListener(window, 'load', load);
 
 
@@ -208,27 +221,50 @@ google.maps.event.addDomListener(window, 'load', load);
 
 
 
-$(".typelink").on("click", function(){
+$(".typelink").on("click.s", function(){
 	var type = $(this).attr("data-type-link");
 
 	if( !($(this).hasClass("is-selected")) )
 		$(".typelink").removeClass("is-selected");
 
 	$(this).toggleClass("is-selected");
-	console.log(this);
+	//console.log(this);
 	toggleGroup(type);
 })
-$(".searchmap .panel .tab-body").on("click", "li", function(){
-	
+
+$(".searchmap .panel .tab-body").on("click.locality", "li", function(){	
 	var typeParent = $(this).attr("data-type");
 	var typeSub = $(this).attr("data-locality");
 	var marker = markerGroups[typeParent];
 	$(markerGroups[typeParent]).map(function(i, el){
-		console.log(i,el);
 		if(el.typeid == typeSub)
 			google.maps.event.trigger(el, "click");
 	})
-	console.log(markerGroups[typeParent]);
 //	infoWindow.open(map, markerGroups["business"].businessT2[0]);
+})
 
+ function searchMatchedLocality(text){
+ 	var matchStatus = true;
+ 	$(".traderoutes-accordion a").map( function(i, el){
+ 		var currentText = $(el).text().trim();
+ 		var newText = currentText.match(new RegExp(text, 'gim'));
+ 		if( newText && matchStatus){
+ 			//matchStatus = false;
+ 			typelink = $(el).closest(".panel").find("a.typelink");
+ 			
+ 				$(el).closest(".panel").find("a.typelink").trigger("click");
+ 				$(el).trigger("click");
+ 				$(el).closest(".tab-body").animate({scrollTop: $(el).position().top - 30})
+ 				console.log(newText, currentText);
+ 			
+ 			//console.log(currentText, text, newText);
+ 		}
+ 	})
+ }
+
+$(".searchmap-search form").on("submit", function(e){
+	e.preventDefault();
+	var val = $(this).find("#searchmap_input").val();
+	searchMatchedLocality(val);
+	//console.log(val);
 })
