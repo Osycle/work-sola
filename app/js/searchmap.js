@@ -3,22 +3,6 @@
 
 
 
-
-
-function xmlParse(str) {
-	if (typeof ActiveXObject != 'undefined' && typeof GetObject != 'undefined') {
-		var doc = new ActiveXObject('Microsoft.XMLDOM');
-		doc.loadXML(str);
-		return doc;
-	}
-
-	if (typeof DOMParser != 'undefined') {
-		return (new DOMParser()).parseFromString(str, 'text/xml');
-	}
-
-	return createElement('div', null);
-}
-
 var infoWindow = new google.maps.InfoWindow();
 var customIcons = {
 	"airports": {
@@ -108,7 +92,7 @@ function load() {
 											;
 				;
 				// var icon = customIcons[type] || {};
-				var marker = createMarker(point, dataItem.title, dataItem.type, map, dataItem.type+"T"+(i+1));
+				var marker = createMarker(point, dataItem.title, dataItem.type, map, dataItem.type+"_"+(i+1));
 				bindInfoWindow(marker, map, infoWindow, content);
 			}
 		},
@@ -143,7 +127,7 @@ function createMarker(point, name, type, map, subType) {
 	.find(".tab-body").attr("id", type)
 	.append(
 			'<li data-type="'+type+'" data-locality="'+subType+'">'+
-				'<a data-toggle="collapse" href="#'+subType+'" class="collapsed" data-parent="#'+type+'">'+name+'</a>'+
+				'<a data-toggle="collapse" href="#'+subType+'" class="collapsed" data-parent="#'+type+'" aria-expanded="false">'+name+'</a>'+
 				'<div id="'+subType+'" class="collapse locality-info">'+
 					'<p>В этом блоке мы рекомендуем разместить информацию о Вашей организации, подчеркнуть ее значимость и надежность на рынке оказываемых услуг или предлагаемых товаров.</p>'+
 					'<span class="schema-link" data-src="img/other/schema.jpg" data-fancybox  data-options=\'{"baseClass": "schema-modal"}\' >Посмотреть схему <i class="fa fa-caret-right"></i></span>'+
@@ -243,24 +227,28 @@ $(".searchmap .panel .tab-body").on("click.locality", "li", function(){
 //	infoWindow.open(map, markerGroups["business"].businessT2[0]);
 })
 
- function searchMatchedLocality(text){
- 	var matchStatus = true;
- 	$(".traderoutes-accordion a").map( function(i, el){
- 		var currentText = $(el).text().trim();
- 		var newText = currentText.match(new RegExp(text, 'gim'));
- 		if( newText && matchStatus){
- 			//matchStatus = false;
- 			typelink = $(el).closest(".panel").find("a.typelink");
- 			
- 				$(el).closest(".panel").find("a.typelink").trigger("click");
- 				$(el).trigger("click");
- 				$(el).closest(".tab-body").animate({scrollTop: $(el).position().top - 30})
- 				console.log(newText, currentText);
- 			
- 			//console.log(currentText, text, newText);
- 		}
- 	})
- }
+function searchMatchedLocality(text){
+	var matchStatus = true;
+	$(".traderoutes-accordion a").map( function(i, el){
+		el = $(el);
+		var currentText = el.text().trim();
+		var newText = currentText.match(new RegExp(text, 'gim'));
+		if( newText && matchStatus){
+			matchStatus = false;
+			typelink = el.closest(".panel").find("a.typelink");
+				el.closest(".tab-body").find(".locality-info").collapse("hide")
+				if( typelink.attr("aria-expanded") == "false" ){
+					typelink.trigger("click");
+				}
+				if( el.attr("aria-expanded") == "false" ){
+					el.trigger("click");
+					el.closest(".tab-body").animate({scrollTop: el.position().top - 30})
+				}
+				//console.log(newText, currentText);
+			//console.log(currentText, text, newText);
+		}
+	});
+}
 
 $(".searchmap-search form").on("submit", function(e){
 	e.preventDefault();
@@ -268,3 +256,9 @@ $(".searchmap-search form").on("submit", function(e){
 	searchMatchedLocality(val);
 	//console.log(val);
 })
+
+if(checkSm()){
+	$(".traderoutes-accordion .tab-body").on("click", "a", function(){
+		mobile_leftacc.checked = false;
+	})
+}

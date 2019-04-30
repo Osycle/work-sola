@@ -1526,6 +1526,22 @@ figcaption{
 		}
 	}
 }
+
+
+
+
+
+
+
+
+
+
+
+.searchmap-wrapper{
+	display: flex;
+	height: 1030px;
+	position: relative;
+}
 .traderoutes-accordion{
 	margin-top: 35px;
 	.icm{
@@ -1592,14 +1608,8 @@ figcaption{
 	}
 }
 .searchmap{
-	.searchmap-wrapper{
-		display: flex;
-		height: 1030px;
-	}
 	.container-fluid-page{
 		border-radius: 10px;
-		@media (min-width: 991px) {
-		}
 	}
 	.column-1, .column-2{
 		float: none;
@@ -1607,21 +1617,15 @@ figcaption{
 	.column-1{
 		@extend .shadow-def;
 		background-color: white;
-		border-radius: 10px 0 0 10px;
-		padding: 40px 70px;
+		border-radius: 10px 0 0 10px;	
 	}
 	.column-2{
 		background-color: $color-gray-5;
 		border-radius: 0 10px 10px 0;
 		padding: 10px 0;
 		height: 100%;
-	}
-
-}
+	}}
 .searchmap-search-container{
-	h2{
-		min-width: 320px;
-	}
 	.wrapper{
 		padding: 30px 40px;
 		display: flex;
@@ -1668,6 +1672,136 @@ figcaption{
 		}
 	}
 }
+#mobile_leftacc{
+	@media (max-width: 991px) {
+		&:not(:checked){
+			&~.column-1{
+				transform: translateX(110%);
+				.btn-leftacc{
+					left: -75px;
+					width: 55px;
+					.icm-left-arrow-min{
+						display: block;
+						margin-left: -15px;
+					}
+					.icm-delete{
+						display: none;
+					}
+				}
+			}
+		}
+	}
+}
+.btn-leftacc{
+	font-size: 20px;
+	//position: absolute;
+	//right: 10px;
+	z-index: 3;
+	width: 40px;
+	position: absolute;
+	left: -20px;
+	top: 8px;
+	height: 40px;
+	display: inline-block;
+	border-radius: 4px;
+	background-color: $color-1;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: white;
+	.icm-delete{
+		font-size: 16px;
+		display: inline-block;
+		margin-top: -3px;
+	}
+	.icm-left-arrow-min{
+		display: none;
+	}
+	@media (min-width: 991px) {
+		display: none;
+	}
+}
+
+@media (min-width: 992px) {
+	.searchmap{
+		.column-1{
+			padding: 40px 70px;
+		}
+	}
+	.searchmap-search-container{
+		h2{
+			min-width: 320px;
+		}
+	}
+}
+
+@media (max-width: 991px) {
+	.searchmap{
+		.container-fluid-page{
+			padding-left: 0;
+			padding-right: 0;
+		}
+	}
+	.siderbarmap-map{
+		//height: calc(100% - 520px);
+	}
+	.searchmap-wrapper{
+		flex-direction: column;
+		height: 100vh;
+		.column-1{
+			background-color: white;
+			top: 130px;
+			z-index: 232;
+			font-size: 0.92em;
+			position: absolute;
+			width: 90%;
+    	margin-left: 7%;
+			border-radius: 0 !important;
+			box-shadow: none;
+			height: calc(100vh - 180px);
+			padding: 0 10px 0 25px;
+			//transform: translateX(110%);
+			transition: all 0.3s ease;
+			box-shadow: 0 0 20px -4px rgba(black, 0.2);
+		}
+		.column-2{
+			//height: calc(100% - 420px);
+		}
+	}
+	.searchmap-search-container{
+		.searchmap-search{
+			button{
+				width: 80px;
+			}
+		}
+		.wrapper{
+			padding: 5px 0px;
+			margin-bottom: 10px;
+			flex-direction: column;
+		}
+	}
+	.searchmap-accordion{
+		display: block;
+		position: absolute;
+		z-index: 2;
+		top: 0;
+		overflow-y: auto;
+		height: 86%;
+    margin-top: 7%;
+		h2{
+			display: none;
+		}
+		.traderoutes-accordion{
+			text-align: left;
+			padding-right: 7px;
+			margin: 5px 0;
+		}
+	}
+}
+
+
+
+
 .schema-link{
 	color: $color-1;
 	font-weight: 600;
