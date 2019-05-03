@@ -92,7 +92,7 @@ function load() {
 											;
 				;
 				// var icon = customIcons[type] || {};
-				var marker = createMarker(point, dataItem.title, dataItem.type, map, dataItem.type+"_"+(i+1));
+				var marker = createMarker(point, dataItem.title, dataItem.type, map, dataItem.type+"_"+(i+1), dataItem.description);
 				bindInfoWindow(marker, map, infoWindow, content);
 			}
 		},
@@ -106,7 +106,7 @@ function load() {
 
 }
 
-function createMarker(point, name, type, map, subType) {
+function createMarker(point, name, type, map, subType, description) {
 	var icon = customIcons[type] || {};
 	var marker = new google.maps.Marker({
 		map: map,
@@ -129,7 +129,7 @@ function createMarker(point, name, type, map, subType) {
 			'<li data-type="'+type+'" data-locality="'+subType+'">'+
 				'<a data-toggle="collapse" href="#'+subType+'" class="collapsed" data-parent="#'+type+'" aria-expanded="false">'+name+'</a>'+
 				'<div id="'+subType+'" class="collapse locality-info">'+
-					'<p>В этом блоке мы рекомендуем разместить информацию о Вашей организации, подчеркнуть ее значимость и надежность на рынке оказываемых услуг или предлагаемых товаров.</p>'+
+					'<p>'+ description +'</p>'+
 					'<span class="schema-link" data-src="img/other/schema.jpg" data-fancybox  data-options=\'{"baseClass": "schema-modal"}\' >Посмотреть схему <i class="fa fa-caret-right"></i></span>'+
 				'</div>'+
 			'</li>');

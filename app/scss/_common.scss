@@ -29,7 +29,8 @@ $color-gray-5: #f8f8f8;
 $bg-color-black: #000;
 $bg-color-gray: $color-gray-4;
 
-
+$middle-size: 1450px;
+$middle-size-ex: 1451px;
 
 
 [class*="col-"]{
@@ -804,7 +805,9 @@ body{
 	background-color: white;
 	background-repeat: repeat-y;
 	background-position: center 0;
-	
+	@media (max-width: $middle-size){
+		font-size: 13.5px;
+	}
 }
 
 
@@ -1013,9 +1016,9 @@ blockquote{
 }
 
 main{
-	//overflow: hidden;
+	overflow: hidden;
 	position: relative;
-	overflow: inherit;
+	//overflow: inherit;
 	//min-height: 300px;
 	z-index: 1;
 	color: black;
@@ -1053,9 +1056,13 @@ main{
 }
 .container-fluid-page{
 	@extend .container-fluid;
-	@media (min-width: 992px) {
+	@media (min-width: $middle-size-ex) {
 		width: calc(100% - 140px);
 	}
+	@media (max-width: $middle-size ) {
+		width: calc(100% - 40px);
+	}
+
 }
 
 hr{

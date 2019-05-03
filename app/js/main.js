@@ -310,7 +310,13 @@
 
 
 
-
+		$(".sub-menu-click").on("click", function(){
+			var that = $(this);
+			console.log(that) ;
+			that.toggleClass("clicked");
+			that.closest(that.attr("data-closest")).find(".sub-1").toggleClass("clicked");
+			
+		})
 
 
 

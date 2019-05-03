@@ -248,6 +248,7 @@ figcaption{
 		}
 	}
 	@media (max-width: 991px) {
+
 		p{
 			display: none;
 		}
@@ -265,6 +266,7 @@ figcaption{
 			width: 100%;
 		}
 		.flickity-page-dots{
+			min-height: 100px;
 			top: auto;
 			height: auto;
 			text-align: center;
@@ -283,7 +285,9 @@ figcaption{
 		.container-arrows{
 			width: 100%;
 		}
-
+		.bnr-phone{
+			display: none;
+		}
 	}
 	@media (min-width: 992px) {
 		.bnr-phone{
@@ -304,6 +308,7 @@ figcaption{
 	position: absolute;
 	bottom: 0;
 	.wrapper{
+		justify-content: center;
 		padding: 15px 15px 30px 15px;	
 	}
 	@media (max-width: 991px) {
@@ -370,6 +375,18 @@ figcaption{
 			transition: all 0.2s ease-in-out;
 			&>div{
 				min-height: 210px;
+				width: 100%;
+			}
+			@media (max-width: $middle-size){
+				min-height: 220px;
+				font-size: 0.9em;
+				align-items: center;
+				.icm{
+					font-size: 50px;
+				}
+				&>div{
+					min-height: 130px !important;
+				}
 			}
 			&:before{
 				@extend .clafclear;
@@ -579,6 +596,11 @@ figcaption{
 		min-height: 670px;
 		margin-top: -300px;
 	}
+	@media (max-width: $middle-size) and (min-width: 991px){
+		.adformat-content{
+			margin-left: 2%;
+		}
+	}
 }
 .adformat-items{
 	.wrapper{
@@ -602,6 +624,11 @@ figcaption{
 	}
 	.desc-content{
 		font-size: em(14, 16);
+	}
+	@media (max-width: $middle-size) and (min-width: 991px){
+		figure{
+			width: 100%;	
+		}
 	}
 }
 .adformat-ask{
@@ -835,8 +862,6 @@ figcaption{
 }
 .worksteps-items{
 	figure{
-		padding-left: 30px;
-		padding-right: 30px;
 		position: relative;
 		&:before{
 			@extend .clafclear;
@@ -844,6 +869,10 @@ figcaption{
 			height: 2px;
 			right: -50%;
 			border-bottom: 1px dashed $color-gray-2;
+		}
+		@media (min-width: $middle-size-ex){
+			padding-left: 30px;
+			padding-right: 30px;
 		}
 		@media (max-width: 991px) {
 			&:before{
@@ -1203,6 +1232,15 @@ figcaption{
 		background-position: center;
 		background-size: cover;
 	}
+	@media (max-width: $middle-size){
+		.img-content{
+			box-shadow: none;
+		}
+		.img{
+			background-size: contain;
+			height: 370px;
+		}
+	}
 }
 
 
@@ -1243,7 +1281,7 @@ figcaption{
 		background-size: cover;
 		height: 100%;
 	}
-	@media (min-width: 992px) {
+	@media (min-width: $middle-size-ex) {
 		.wrapper{
 			min-height: 450px;
 		}
@@ -1251,8 +1289,21 @@ figcaption{
 			padding: 50px 60px;
 			padding-bottom: 10px;
 		}
+
 		h2{
 			width: 75%;
+		}
+	}
+	@media (max-width: $middle-size){
+		.desc-content{
+			padding: 10px 15px;
+			padding-bottom: 10px;
+		}
+		.wrapper{
+			min-height: 250px;
+		}
+		.img{
+			width: 160px;
 		}
 	}
 }
@@ -1722,7 +1773,7 @@ figcaption{
 	}
 }
 
-@media (min-width: 992px) {
+@media (min-width: $middle-size-ex) {
 	.searchmap{
 		.column-1{
 			padding: 40px 70px;
@@ -1731,6 +1782,20 @@ figcaption{
 	.searchmap-search-container{
 		h2{
 			min-width: 320px;
+		}
+	}
+}
+@media (max-width: $middle-size) {
+	.searchmap{
+		.column-1{
+			padding: 40px 15px;
+			font-size: 0.9em;
+		}
+	}
+	.searchmap-search-container{
+		h2{
+			font-size: 1.5em;
+			min-width: 200px;
 		}
 	}
 }
@@ -1787,6 +1852,7 @@ figcaption{
 		top: 0;
 		overflow-y: auto;
 		height: 86%;
+		width: calc(100% - 50px);
     margin-top: 7%;
 		h2{
 			display: none;
