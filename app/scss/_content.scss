@@ -379,7 +379,6 @@ figcaption{
 			}
 			@media (max-width: $middle-size){
 				min-height: 220px;
-				font-size: 0.9em;
 				align-items: center;
 				.icm{
 					font-size: 50px;
@@ -1037,11 +1036,11 @@ figcaption{
 		position: absolute;
 		&.previous{
 			left: 50%;
-			transform: translate(-300px, -15px);
+			transform: translate(-348px, -15px);
 		}
 		&.next{
 			right: 50%;
-			transform: translate(320px, -15px);
+			transform: translate(348px, -15px);
 		}
 
 

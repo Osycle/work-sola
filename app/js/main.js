@@ -187,7 +187,7 @@
 			draggable: false,
 			wrapAround: false,
 			pageDots: false,
-			contain: true,
+			contain: false,
 			percentPosition: true,
 			cellSelector: 'figure',
 			cellAlign: "center"
