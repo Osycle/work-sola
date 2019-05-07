@@ -21,6 +21,7 @@
 <body>
 	<!-- модальные окна -->
 	<div class="hide">
+
 		<div class="menumodal" id="menumodal">
 			<div class="menumodal-container">
 				<div class="header-lang">
@@ -63,6 +64,61 @@
 				<span class="btn-def m-v-15 font-size-1">
 					<a href="production.html" title="" class="p-v-15 p-h-30"><small><b>вам перезвонить?</b></small></a>
 				</span>
+			</div>
+		</div>
+
+		<div id="form_bid" class="form-bid">
+			<div class="form-wrapper">
+
+				<!-- form-main -->
+				<div class="form-main hide">
+					<div class="text-center">
+						<h2>Форма для заявки:</h2>
+					</div>
+					<form action="" method="get" accept-charset="utf-8">
+
+						<label class="m-v-10 box-xs-10">
+							<span class="label-title">Ваше имя:</span>
+							<input type="text" name="" value="" class="form-control">
+						</label>
+						<label class="m-v-10 box-xs-10">
+							<span class="label-title">Регион:</span>
+							<input type="text" name="" value="" class="form-control">
+						</label>
+						<label class="m-v-10 box-xs-10">
+							<span class="label-title">Номер телефона:</span>
+							<input type="text" name="" value="" class="form-control">
+						</label>
+						<label class="m-v-10 box-xs-10">
+							<span class="label-title">Почта:</span>
+							<input type="text" name="" value="" class="form-control">
+						</label>
+
+						<div class="text-center">
+							<span class="btn-def m-v-15">
+								<button  type="submit" class="p-h-30 p-v-15">Отправить</button>
+							</span>
+						</div>
+					</form>
+				</div>
+
+				<!-- SUCCESS -->
+				<!-- Убрать класс hide -->
+				<div class="form-success text-center">
+					<div class="icon-content m-v-30">
+						<span class="fa fa-check color-1" style="font-size: 60px;"></span>
+					</div>
+					<div class="text-center">
+						<h2>Ваша заявка отправлена!</h2>
+						<p>Мы свяжемся с вами</p>
+					</div>
+					<div class="m-v-30 text-center">
+						<span class="btn-def">
+							<a href="javascript:;" data-fancybox-close>Хорошо</a>
+						</span>
+					</div>
+				</div>
+
 			</div>
 		</div>
 	</div>
@@ -390,7 +446,7 @@
 									</div>
 									<div class="col-md-6 text-right-md m-v-5">
 										<span class="btn-def">
-											<a href="javascript:;" class="p-h-20 p-v-15"><small>Подключить</small></a>
+											<a href="javascript:;" data-src="#form_bid" data-fancybox class="p-h-20 p-v-15"><small>Подключить</small></a>
 										</span>
 									</div>
 								</div>
@@ -429,7 +485,7 @@
 									</div>
 									<div class="col-md-6 text-right-md m-v-5">
 										<span class="btn-def">
-											<a href="javascript:;" class="p-h-20 p-v-15"><small>Подключить</small></a>
+											<a href="javascript:;" data-src="#form_bid" data-fancybox class="p-h-20 p-v-15"><small>Подключить</small></a>
 										</span>
 									</div>
 								</div>
@@ -468,7 +524,7 @@
 									</div>
 									<div class="col-md-6 text-right-md m-v-5">
 										<span class="btn-def">
-											<a href="javascript:;" class="p-h-20 p-v-15"><small>Подключить</small></a>
+											<a href="javascript:;" data-src="#form_bid" data-fancybox class="p-h-20 p-v-15"><small>Подключить</small></a>
 										</span>
 									</div>
 								</div>
@@ -507,7 +563,7 @@
 									</div>
 									<div class="col-md-6 text-right-md m-v-5">
 										<span class="btn-def">
-											<a href="javascript:;" class="p-h-20 p-v-15"><small>Подключить</small></a>
+											<a href="javascript:;" data-src="#form_bid" data-fancybox class="p-h-20 p-v-15"><small>Подключить</small></a>
 										</span>
 									</div>
 								</div>
@@ -546,7 +602,7 @@
 									</div>
 									<div class="col-md-6 text-right-md m-v-5">
 										<span class="btn-def">
-											<a href="javascript:;" class="p-h-20 p-v-15"><small>Подключить</small></a>
+											<a href="javascript:;" data-src="#form_bid" data-fancybox class="p-h-20 p-v-15"><small>Подключить</small></a>
 										</span>
 									</div>
 								</div>

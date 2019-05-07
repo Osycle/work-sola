@@ -684,12 +684,10 @@ textarea.form-control{
 
 }
 
-#form_order, #form_feedback{	
-	@media (min-width: 992px) {
-		width: 420px;
-	}
-}
 
+.form-bid{
+	max-width: 420px;
+}
 .form-def{	
 	padding-right: 40px;
 	padding-left: 40px;

@@ -9468,9 +9468,8 @@ textarea.form-control {
     padding-bottom: 15px;
     border-bottom: 1px dotted gray; } }
 
-@media (min-width: 992px) {
-  #form_order, #form_feedback {
-    width: 420px; } }
+.form-bid {
+  max-width: 420px; }
 
 .form-def {
   padding-right: 40px;
