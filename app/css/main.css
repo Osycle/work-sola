@@ -11257,9 +11257,8 @@ figcaption {
   justify-content: space-between; }
 
 .footer-menu-item {
-  padding: 0 15px; }
-  .footer-menu-item li {
-    max-width: 120px; }
+  padding: 0 15px;
+  white-space: nowrap; }
   .footer-menu-item a {
     color: #5e5e5e; }
     .footer-menu-item a:not(:hover) {
