@@ -685,19 +685,20 @@ figcaption{
 
 	.img-content{
 
-		&:before, &:after{
+		&:after{
 			@extend .clafclear;
 			height: calc(100% - 85px);
 			bottom: 0;
 			left: 30%;
 			width: 60%;
-			background-color: #f2f2f2;
-		}
-		&:after{
-			width: 65%;
 			z-index: -1;
-			background-color: #fdfdfd;
+			background: linear-gradient( to right, #f2f2f2, transparent);
 		}
+		// &:after{
+		// 	width: 65%;
+		// 	z-index: -1;
+		// 	background-color: #fdfdfd;
+		// }
 	}
 	.desc-content{
 		padding-top: 30px;
@@ -735,7 +736,8 @@ figcaption{
 					text-align: right;
 				}
 				.img-content{
-					&:before, &:after{
+					&:after{
+						background: linear-gradient( to left, #f2f2f2, transparent);
 						left: auto;
 						right: 30%;
 					}
@@ -750,6 +752,9 @@ figcaption{
 
 //partners-items
 .partners-items{
+	.owl-stage-outer{
+		overflow: visible;
+	}
 	figure{
 
 	}
