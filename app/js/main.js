@@ -307,7 +307,9 @@
 		});
 		$(window).trigger("scroll");
 
-
+		$(window).on("scroll", function(e) {
+			console.log(e);
+		})
 
 
 		$(".sub-menu-click").on("click", function(){
