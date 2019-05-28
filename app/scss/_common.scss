@@ -94,16 +94,7 @@ $middle-size-ex: 1451px;
 }
 // IE
 html{
-	-ms-scrollbar-track-color: rgba(0, 0, 0, 0);
-	-ms-scrollbar-face-color: $color-scroll;
-	-ms-scrollbar-shadow-color: $color-scroll;
-	-ms-scrollbar-base-color: lighten($color-scroll, 5%);
 
-	-ms-scroll-translation: vertical-to-horizontal;
-	-ms-scroll-snap-type: mandatory;
-	-ms-scrollbar-3dlight-color: $color-scroll;
-	-ms-scrollbar-darkshadow-color: darken($color-scroll, 5%);
-	-ms-scrollbar-highlight-color: transparent;
 }
 ::selection {
     background: $color-1;

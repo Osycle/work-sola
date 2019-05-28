@@ -7678,17 +7678,6 @@ tbody.collapse.in {
 ::-o-scrollbar-track-piece {
   background-color: rgba(255, 255, 255, 0.5); }
 
-html {
-  -ms-scrollbar-track-color: rgba(0, 0, 0, 0);
-  -ms-scrollbar-face-color: #06c129;
-  -ms-scrollbar-shadow-color: #06c129;
-  -ms-scrollbar-base-color: #07da2e;
-  -ms-scroll-translation: vertical-to-horizontal;
-  -ms-scroll-snap-type: mandatory;
-  -ms-scrollbar-3dlight-color: #06c129;
-  -ms-scrollbar-darkshadow-color: #05a824;
-  -ms-scrollbar-highlight-color: transparent; }
-
 ::-moz-selection {
   background: #06c129;
   color: #fff;
@@ -10986,6 +10975,9 @@ figcaption {
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center; }
+
+.searchmap-accordion h2 {
+  font-size: 1.2em; }
 
 .searchmap-search {
   padding: 0 30px;
