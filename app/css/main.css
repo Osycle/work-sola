@@ -7928,7 +7928,7 @@ table {
 .img {
   background-repeat: no-repeat; }
 
-.shadow-def, .about-content .text-item:before, .operator-services .wrapper:hover, .news-items .boxes-cell:hover, .ssolution .tab-content, .news-article .article-content .wrapper, .searchmap .column-1 {
+.shadow-def, .about-content .text-item:before, .operator-services .wrapper:hover, .news-items .boxes-cell:hover, .ssolution .tab-content, .news-article .article-content .wrapper, .searchmap .column-1, .short-news-items .boxes-cell {
   -webkit-box-shadow: 0 0 20px -4px rgba(0, 0, 0, 0.2);
   box-shadow: 0 0 20px -4px rgba(0, 0, 0, 0.2); }
 
@@ -8502,7 +8502,6 @@ body {
   text-size-adjust: none;
   font: 16px "Gilroy";
   overflow-x: hidden;
-  display: contents;
   background-color: white;
   background-repeat: repeat-y;
   background-position: center 0; }
@@ -11183,6 +11182,59 @@ figcaption {
     font-weight: 600;
     font-size: 1.1em;
     color: #06c129; }
+
+.news .link-content {
+  text-align: center;
+  text-transform: uppercase;
+  margin-top: 20px;
+  margin-bottom: 20px; }
+  @media (min-width: 992px) {
+    .news .link-content {
+      margin-top: 50px; } }
+
+.short-news-items .boxes-cell {
+  background-color: white;
+  -webkit-border-radius: 12px;
+  border-radius: 12px; }
+
+.short-news-items .img-content {
+  text-align: center; }
+
+.short-news-items .img {
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  height: 250px;
+  display: none;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-position: center; }
+
+.short-news-items img {
+  width: 100%;
+  -webkit-border-radius: 10px;
+  border-radius: 10px; }
+
+.short-news-items .desc-content {
+  font-weight: 500;
+  padding: 5px 15px 20px 15px;
+  min-height: 135px; }
+  .short-news-items .desc-content h4 {
+    font-size: 1.25em;
+    line-height: 1;
+    font-weight: 800;
+    min-height: 34px; }
+    .short-news-items .desc-content h4 a {
+      color: inherit;
+      -webkit-transition: all 0.3s ease;
+      -o-transition: all 0.3s ease;
+      transition: all 0.3s ease;
+      text-decoration: underline; }
+      .short-news-items .desc-content h4 a:hover {
+        color: #06c129; }
+  .short-news-items .desc-content p {
+    line-height: 1; }
+  .short-news-items .desc-content a {
+    color: #017301; }
 
 /* 
 		_footer.scss
