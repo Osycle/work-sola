@@ -9942,7 +9942,7 @@ figcaption {
   box-shadow: 0 0 40px -15px rgba(0, 0, 0, 0.3); }
 
 .short-feedback {
-  background-image: url("../img/bg/bg-feedback.jpg");
+  background-image: url("../img/bg/bg-feedback-green.jpg");
   background-position: bottom;
   background-repeat: no-repeat; }
   @media (min-width: 992px) {
